@@ -4,7 +4,8 @@ class CreateAppointments < ActiveRecord::Migration[5.2]
       t.datetime :schedule_at
       t.string :payment_status
       t.integer :duration
-      t.references :user, foreign_key: true
+      t.integer :user_id, null: false
+      t.integer :coach_id, null: false
 
       t.timestamps
     end
