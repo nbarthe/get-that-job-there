@@ -39,15 +39,17 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :occupation
       t.string :field
-      t.string :hourly_rate
       t.string :city
-
       t.date :born_on
 
+      t.references :appointment
+
+      # Coaches have these
+      t.string :hourly_rate
       t. datetime :available_start_at
       t. datetime :available_end_at
 
-      t.references :appointment
+
 
       t.timestamps null: false
     end
