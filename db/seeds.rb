@@ -25,20 +25,20 @@ coach = Coach.create!(
   hourly_rate: '100 EUR',
   city: 'Ibiza',
   born_on: '01/01/1940',
-  available_start_at: '20',
-  available_end_at: '21' )
+  available_start_at: '08',
+  available_end_at: '18' )
 
 
-a = Appointment.new(schedule_at: '10/10/2019', payment_status: 'paid', duration: '1', user_id: '1', coach_id: '2')
+a = Appointment.new(schedule_at: '10/9/2020', payment_status: 'paid', duration: '2', user_id: '1', coach_id: '1')
 a.user = nati
 a.coach = coach
-b = Appointment.new(schedule_at: '10/10/2019', payment_status: 'paid', duration: '1', user_id: '2', coach_id: '1')
+b = Appointment.new(schedule_at: '10/8/2020', payment_status: 'paid', duration: '1', user_id: '2', coach_id: '1')
 b.user = andre
 b.coach = coach
-c = Appointment.new(schedule_at: '10/10/2019', payment_status: 'paid', duration: '1', user_id: '1', coach_id: '2')
+c = Appointment.new(schedule_at: '10/7/2020', payment_status: 'paid', duration: '1', user_id: '4', coach_id: '1')
 c.user = sarra
 c.coach = coach
-d= Appointment.new(schedule_at: '10/10/2019', payment_status: 'paid', duration: '1', user_id: '3', coach_id: '1')
+d= Appointment.new(schedule_at: '10/10/2020', payment_status: 'paid', duration: '1', user_id: '3', coach_id: '1')
 d.user = fer
 d.coach = coach
 
