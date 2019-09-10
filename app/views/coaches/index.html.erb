@@ -1,0 +1,8 @@
+<h1>The Coaches</h1>
+<% @coaches.each do |coach| %>
+<strong><%= coach.field %></strong> <br>
+<%= link_to "#{coach.first_name} #{coach.last_name}" , coach_path(coach)%> <br>
+ <em>Contact: <%= coach.email %></em> <br>
+ Price per hour : <%= coach.hourly_rate %> <br>
+ Available from : <%=   coach.available_start_at.strftime("%d am") %> to <%= coach.available_end_at.strftime("at %d pm") %>  <br>
+<% end %>
