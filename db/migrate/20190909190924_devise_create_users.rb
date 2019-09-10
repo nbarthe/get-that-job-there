@@ -46,8 +46,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       # Coaches have these
       t.string :hourly_rate
-      t. datetime :available_start_at
-      t. datetime :available_end_at
+      t.time :available_start_at
+      t.time :available_end_at
 
 
 
