@@ -36,12 +36,12 @@ ActiveRecord::Schema.define(version: 2019_09_09_193003) do
     t.string "last_name"
     t.string "occupation"
     t.string "field"
-    t.string "hourly_rate"
     t.string "city"
     t.date "born_on"
+    t.bigint "appointment_id"
+    t.string "hourly_rate"
     t.datetime "available_start_at"
     t.datetime "available_end_at"
-    t.bigint "appointment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["appointment_id"], name: "index_users_on_appointment_id"
