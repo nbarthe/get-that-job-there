@@ -1,6 +1,6 @@
 class CoachesController < ApplicationController
   def index
-    @coaches = Coach.all
+    @coaches = Coach.where(city: params[:city])
   end
 
   def show
