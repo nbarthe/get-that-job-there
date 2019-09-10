@@ -1,5 +1,16 @@
+$break-small: 600px;
+
 .search-form-control {
   position: relative;
+}
+
+.search-form-control button {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  @media screen and (max-width: $break-small) {
+    top: 58px;
+  }
 }
 
 .search-form-control .btn {

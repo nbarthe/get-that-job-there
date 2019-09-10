@@ -9,13 +9,35 @@
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
+
       <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                   input_html: { autocomplete: "new-password" } %>
+
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
+
+      <%= f.input :type, collection: ["User", "Coach"], :label => 'User or Coach?', prompt: "Choose From List" %>
+
+      <%= f.input :first_name, required: true %>
+
+      <%= f.input :last_name, required: true %>
+
+      <%= f.input :occupation, required: true %>
+
+      <%= f.input :field, required: true %>
+
+      <%= f.input :city, required: true %>
+
+      <%= f.input :born_on,
+                  required: true,
+                  as: :date,
+                  start_year: Date.today.year - 18,
+                  end_year: Date.today.year - 90,
+                  order: [:day, :month, :year] %>
+
     </div>
 
     <div class="form-actions">
