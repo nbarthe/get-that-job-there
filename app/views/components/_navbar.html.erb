@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://lh3.google.com/u/0/d/19AgrFDq5d-7WiNP0BZa2BwFi9StW2RZ-=w1920-h867-iv1" %>
+    <%= image_tag "logobleue.png" %>
   <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,16 +11,27 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to "Home", "#", class: "nav-link" %>
+        <%= link_to "Home", "/", class: "nav-link" %>
       </li>
+      <!-- if the user is signed in -->
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Edit my Account", edit_user_registration_path , class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      <!-- if the user is NOT logged in -->
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Sign up", new_user_registration_path , class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Log in", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
       <li class="nav-item">
-        <%= link_to "Sign up", "#", class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Log in", "#", class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Who are we?", "#", class: "nav-link" %>
+        <%= link_to "Who are we?", who_are_we_path, class: "nav-link" %>
       </li>
       <li class="nav-item dropdown">
         <%= image_tag "https://avatars1.githubusercontent.com/u/51202659?s=460&v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
