@@ -18,8 +18,9 @@ fer = User.create!(first_name: 'Fer', email: 'fer9@hotmail.com', password: '1234
 
 Coach.destroy_all
 coach = Coach.create!(
-  first_name: 'Coach',
-  email: 'coach@coach.coach',
+  first_name: 'Ross',
+  last_name: 'Geller',
+  email: 'ross@dino.coach',
   password: '123456',
   field: 'Teaching',
   hourly_rate: '100 EUR',
@@ -27,6 +28,43 @@ coach = Coach.create!(
   born_on: '01/01/1940',
   available_start_at: '08',
   available_end_at: '18' )
+
+coach = Coach.create!(
+  first_name: 'Teddu',
+  last_name: 'Bear',
+  email: 'teddy@coach.coach',
+  password: '123456',
+  field: 'IT',
+  hourly_rate: '200 EUR',
+  city: 'Rio de Janeiro',
+  born_on: '01/01/1990',
+  available_start_at: '09',
+  available_end_at: '17' )
+
+coach = Coach.create!(
+  first_name: 'Chandler',
+  last_name: 'Bing',
+  email: 'chandler@coach.coach',
+  password: '123456',
+  field: 'Accounting',
+  hourly_rate: '100 EUR',
+  city: 'New York',
+  born_on: '01/01/1940',
+  available_start_at: '08',
+  available_end_at: '18' )
+
+coach = Coach.create!(
+  first_name: 'Phoebe',
+  last_name: 'Princessconsuela',
+  email: 'phoebe@coach.coach',
+  password: '123456',
+  field: 'Lawyer',
+  hourly_rate: '100 EUR',
+  city: 'Buenos Aires',
+  born_on: '01/01/1985',
+  available_start_at: '05',
+  available_end_at: '12' )
+
 
 
 a = Appointment.new(schedule_at: '10/9/2020', payment_status: 'paid', duration: '2', user_id: '1', coach_id: '1')
