@@ -8,8 +8,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'a2a603f641317474caa79ec5b764037911e16f0240e77d9b42b7bb48d3d442a382934885e7ee15fd2c96639f23a3bdaa3d8ea50d46495aa5d6814fd066a00cc6'
 
+  # config.secret_key = '37e4bec88d597c8e5819cb8fe01c984b3e7b54bc1239e97b51a1aff11953f00e92f2d2f0afa0e2ef5b2aa2781769ea89a7994998a53794c535be696495254034'
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -18,11 +18,10 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
+  config.mailer_sender = 'cyrille@lewagon.com'
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
-
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
 
@@ -74,7 +73,6 @@ Devise.setup do |config|
 
   # If 401 status code should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
-
   # The realm used in Http Basic Authentication. 'Application' by default.
   # config.http_authentication_realm = 'Application'
 
@@ -114,11 +112,9 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '87ded5668b4ade1d1b574143dd7c012b4747e1aa82a134b6955daf44339c15017ec4c618bf5c6dc8b64c6ee68f8c1b5cfa2fabfcd5c6bade5b485c35658dcc29'
-
+  # config.pepper = 'fc8273baa5e2564cb6f16bdf2bfe97f0a9072d9187f0b07837d3321a0e7c093eb7e699f598de3f256419e7eaf2c9769baa3da99da00671014f92e6d967013eec'
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
-
   # Send a notification email when the user's password is changed.
   # config.send_password_change_notification = false
 
@@ -149,21 +145,16 @@ Devise.setup do |config|
 
   # Defines which key will be used when confirming an account
   # config.confirmation_keys = [:email]
-
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
   # config.remember_for = 2.weeks
-
   # Invalidates all the remember me tokens when the user signs out.
   config.expire_all_remember_me_on_sign_out = true
-
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
-
   # Options to be passed to the created cookie. For instance, you can set
   # secure: true in order to force SSL only cookies.
   # config.rememberable_options = {}
-
   # ==> Configuration for :validatable
   # Range for password length.
   config.password_length = 6..128
@@ -197,10 +188,8 @@ Devise.setup do |config|
   # Number of authentication tries before locking an account if lock_strategy
   # is failed attempts.
   # config.maximum_attempts = 20
-
   # Time interval to unlock the account if :time is enabled as unlock_strategy.
   # config.unlock_in = 1.hour
-
   # Warn on the last attempt before the account is locked.
   # config.last_attempt_warning = true
 
@@ -237,7 +226,6 @@ Devise.setup do |config|
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
   # config.default_scope = :user
-
   # Set this configuration to false if you want /users/sign_out to sign out
   # only the current scope. By default, Devise signs out all scopes.
   # config.sign_out_all_scopes = true
