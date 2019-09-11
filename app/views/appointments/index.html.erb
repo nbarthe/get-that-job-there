@@ -1,2 +1,23 @@
-<h1>Appointments#index</h1>
-<p>Find me in app/views/appointments/index.html.erb</p>
+<div class="container">
+  <h1>Appointments</h1>
+  <p>Hello <%= current_user.first_name %>! Here are your appointments!</p>
+
+  <div class="container">
+    <ol>
+      <!-- this should be cards -->
+      <% @appointments.each do |appointment| %>
+          <li>
+            <p>
+             Scheduled at: <%= appointment.schedule_at %>
+            </p>
+            <p>
+              Duration: <%= appointment.duration %> hours
+            </p>
+            <p>
+              Coach: <%= Coach.find(appointment.coach_id).first_name %>
+            </p>
+          </li>
+      <% end %>
+    </ol>
+  </div>
+</div>

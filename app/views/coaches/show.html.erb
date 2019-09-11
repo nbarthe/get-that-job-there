@@ -71,6 +71,11 @@
     <h5> <strong>City:</strong> <%= @coach.city  %> </h5>
     <h5> <strong>Field:</strong> <%= @coach.field %></h5>
     <h5> <strong>Price per hour:</strong> <%= @coach.hourly_rate %> </h5>
-    <h5> <strong>Available from:</strong> <%=   @coach.available_start_at.strftime("%d am") %> to <%= @coach.available_end_at.strftime("at %d pm") %> </h5> <br>
- <br>
+    <h5> <strong>Available from:</strong> <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> </h5> <br>
+   <br>
 
+  <%= link_to "Book #{@coach.first_name}",
+              new_coach_appointment_path(@coach),
+              class: "btn btn-primary" %>
+
+</div>
