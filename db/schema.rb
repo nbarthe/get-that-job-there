@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 2019_09_10_204702) do
     t.date "born_on"
     t.bigint "appointment_id"
     t.string "hourly_rate"
-    t.time "available_start_at"
-    t.time "available_end_at"
+    t.datetime "available_start_at"
+    t.datetime "available_end_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
