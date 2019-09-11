@@ -1,30 +1,29 @@
 <div class="container">
-<hr>
-<div class="row">
-  <div class="col-2 text-center">
-    <img src="https://avatars0.githubusercontent.com/u/51202659?v=4"/>
-  </div>
-  <div class="col-9 text-justify" >
-    <h1><%= "#{@coach.first_name} #{@coach.last_name}" %></h1>
-      <p>
-        <i class="far fa-envelope"></i> <%= @coach.email %> &sdot;
-        <i class="fab fa-linkedin"></i> &sdot;
-        <i class="fab fa-twitter-square"></i> &sdot;
-        <i class="fab fa-instagram"></i>
-      <p>
-  </div>
-</div>
-<p>
-  <br>
-    <h5>  " <%= @coach.description  %> " </h5>
-    <br>
-    <p><i class="fas fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
-    <p><i class="fas fa-award"></i> Specialty: <%= @coach.field %></p>
-    <p><i class="fas fa-dollar-sign"></i> <%= @coach.hourly_rate %> / hour</p>
-    <p><i class="far fa-calendar-alt"></i> Availabilty: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> @ business days</p>
 
-  <%= link_to "Book #{@coach.first_name}",
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">
+    <%= @coach.first_name %> <%= @coach.last_name %> profile
+  </div>
+  <br>
+
+  <div class="card-product">
+       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-square"/>
+       <div class="card-product-infos">
+      <p><strong>Name:</strong> <%= "#{@coach.first_name} #{@coach.last_name}" %></p>
+      <p><strong>Contact:</strong> <%= @coach.email %></p>
+      <p><strong>Hourly </strong>rate: <%= @coach.hourly_rate %></p>
+      <p><strong>Field:</strong> <%= @coach.field %></p>
+    </div>
+   </div>
+  <br>
+
+  <h3>Description</h3>
+  <p class="text-justify"><%= @coach.description %></p>
+
+  <%= link_to "Book an appointment with #{@coach.first_name}",
               new_coach_appointment_path(@coach),
               class: "btn btn-gradient" %>
+
+
+
 
 </div>
