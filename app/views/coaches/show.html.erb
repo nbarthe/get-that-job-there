@@ -1,15 +1,30 @@
 <div class="container">
-  <h1><%= "#{@coach.first_name} #{@coach.last_name}" %></h1>
-  <p><em>Contact: <%= @coach.email %></em> <br> </p>
-    <h5>  <%= @coach.description  %> </h5>
-    <h5> <strong>City:</strong> <%= @coach.city  %> </h5>
-    <h5> <strong>Field:</strong> <%= @coach.field %></h5>
-    <h5> <strong>Price per hour:</strong> <%= @coach.hourly_rate %> </h5>
-    <h5> <strong>Available from:</strong> <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> </h5> <br>
-   <br>
+<hr>
+<div class="row">
+  <div class="col-2 text-center">
+    <img src="https://avatars0.githubusercontent.com/u/51202659?v=4"/>
+  </div>
+  <div class="col-9 text-justify" >
+    <h1><%= "#{@coach.first_name} #{@coach.last_name}" %></h1>
+      <p>
+        <i class="far fa-envelope"></i> <%= @coach.email %> &sdot;
+        <i class="fab fa-linkedin"></i> &sdot;
+        <i class="fab fa-twitter-square"></i> &sdot;
+        <i class="fab fa-instagram"></i>
+      <p>
+  </div>
+</div>
+<p>
+  <br>
+    <h5>  " <%= @coach.description  %> " </h5>
+    <br>
+    <p><i class="fas fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
+    <p><i class="fas fa-award"></i> Specialty: <%= @coach.field %></p>
+    <p><i class="fas fa-dollar-sign"></i> <%= @coach.hourly_rate %> / hour</p>
+    <p><i class="far fa-calendar-alt"></i> Availabilty: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> @ business days</p>
 
   <%= link_to "Book #{@coach.first_name}",
               new_coach_appointment_path(@coach),
-              class: "btn btn-primary" %>
+              class: "btn btn-gradient" %>
 
 </div>
