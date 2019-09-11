@@ -1,16 +1,18 @@
-<div class="container">
-  <h2>Book a session with <%= @coach.first_name %></h2>
+<h2 class="text-center">Book a session with <%= @coach.first_name %></h2>
+<br>
+<div class="d-flex justify-content-center">
+
 
   <%= simple_form_for [@coach, @appointment] do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input Appointment::ATTRIBUTES[0] %>
-      <%= f.input Appointment::ATTRIBUTES[1], label: "Duration (in hours)" %>
+      <%= f.input :schedule_at %>
+      <%= f.input :duration, label: "Duration (in hours)" %>
     </div>
 
-    <div class="form-actions btn btn-primary">
-      <%= f.button :submit, "Sign up" %>
+    <div class="form-actions">
+      <%= f.button :submit, "Sign up", class: "btn btn-primary btn-block btn-lg" %>
     </div>
   <% end %>
 </div>
