@@ -1,3 +1,70 @@
+<div class="card-container">
+
+  <div class="row card-product">
+
+    <div class="col-xs-12 col-md-3 col-sm-6">
+      <img src="https://avatars0.githubusercontent.com/u/51202659?v=4"/>
+    </div>
+
+    <div class="col-xs-12 col-md-3 col-sm-6" >
+      <h2><%= "#{@coach.first_name} #{@coach.last_name}" %></h2>
+
+        <p><i class="far fa-envelope"></i> <%= @coach.email %></p>
+        <p><i class="fas fa-map-marked-alt"></i> <%= @coach.city  %></p>
+        <p><i class="fas fa-award"></i> <%= @coach.field %></p>
+        <p><i class="fas fa-dollar-sign"></i> <%= @coach.hourly_rate %> / hour</p>
+    </div>
+
+    <div class="col-xs-12 col-md-3 col-sm-6">
+      <h2>Social</h2>
+      <p><i class="fab fa-linkedin"></i> LinkedIn</p>
+      <p><i class="fab fa-twitter-square"></i> Twitter</p>
+      <p><i class="fab fa-instagram"></i> Instagram</p>
+    </div>
+
+    <div class="col-xs-12 col-md-3 col-sm-6">
+      <a class="btn-gradient" href="#">Book now</a>
+    </div>
+
+  </div>
+
+  <div class="coach_description">
+    <%= @coach.description  %>
+  </div>
+</div>
+
+
+
+<!-- <div class="card-container">
+
+  <div class="card-product">
+    <img src="https://avatars0.githubusercontent.com/u/51202659?v=4"/>
+
+    <div class="card-product-infos">
+
+        <h2><%= "#{@coach.first_name} #{@coach.last_name}" %></h2>
+        <p><i class="far fa-envelope"></i> <%= @coach.email %></p>
+        <p><i class="fas fa-map-marked-alt"></i> <%= @coach.city  %></p>
+        <p><i class="fas fa-award"></i> <%= @coach.field %></p>
+        <p><i class="fas fa-award"></i> <%= @coach.field %></p>
+
+    </div>
+
+    <div class="card-product-infos">
+
+      <h2>Social</h2>
+      <p><i class="fab fa-linkedin"></i> LinkedIn</p>
+      <p><i class="fab fa-twitter-square"></i> Twitter</p>
+      <p><i class="fab fa-instagram"></i> Instagram</p>
+
+    </div>
+
+
+  </div>
+</div> -->
+
+
+
 <h1><%= "#{@coach.first_name} #{@coach.last_name}" %></h1>
   <p><em>Contact: <%= @coach.email %></em> <br> </p>
     <h5>  <%= @coach.description  %> </h5>
