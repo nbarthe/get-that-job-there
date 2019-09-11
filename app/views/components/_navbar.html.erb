@@ -16,6 +16,9 @@
       <!-- if the user is signed in -->
       <% if user_signed_in? %>
         <li class="nav-item">
+          <%= link_to "My Appointments", user_appointments_path(current_user), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
           <%= link_to "Edit my Account", edit_user_registration_path , class: "nav-link" %>
         </li>
         <li class="nav-item">
