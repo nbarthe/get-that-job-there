@@ -1,9 +1,27 @@
-<h1>The Coaches</h1>
-<% @coaches.each do |coach| %>
-<strong><%= coach.field %></strong> <br>
-<%= link_to "#{coach.first_name} #{coach.last_name}" , coach_path(coach)%> <br>
- <em>Contact: <%= coach.email %></em> <br>
- Price per hour : <%= coach.hourly_rate %> <br>
- Available from : <%=   coach.available_start_at.strftime("%d am") %> to <%= coach.available_end_at.strftime("at %d pm") %>  <br>
- <br>
-<% end %>
+<div class="container">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60)">
+    Discover coaches in your city
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div>
+  <% @coaches.each do |coach| %>
+
+  <div class="card-product">
+       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-square"/>
+       <div class="card-product-infos">
+      <h2><%= link_to "#{coach.first_name} #{coach.last_name}" , coach_path(coach)%></h2>
+      <p>Contact: <%= coach.email %></p>
+      <p>Hourly rate: <%= coach.hourly_rate %></p>
+      <p>Field: <%= coach.field %></p>
+   </div>
+   </div>
+  <% end %>
+
+
+
+
+
+</div>
