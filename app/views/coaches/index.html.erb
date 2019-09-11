@@ -6,4 +6,5 @@
  Price per hour : <%= coach.hourly_rate %> <br>
  Available from : <%=   coach.available_start_at.strftime("%d am") %> to <%= coach.available_end_at.strftime("at %d pm") %>  <br>
  <br>
+ <%= link_to "Back to Home", root_path %>
 <% end %>
