@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2019_09_10_204702) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "schedule_at"
-    t.string "payment_status", default: "not paid"
-    t.integer "duration", null: false
+    t.string "payment_status"
+    t.integer "duration"
     t.integer "user_id", null: false
     t.integer "coach_id", null: false
     t.datetime "created_at", null: false
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 2019_09_10_204702) do
     t.date "born_on"
     t.bigint "appointment_id"
     t.string "hourly_rate"
-    t.time "available_start_at"
-    t.time "available_end_at"
+    t.datetime "available_start_at"
+    t.datetime "available_end_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
