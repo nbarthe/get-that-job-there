@@ -21,6 +21,15 @@
 
       <%= f.input :type, collection: ["User", "Coach"], :label => 'User or Coach?', prompt: "Choose From List" %>
 
+      <!-- coach options -->
+      <div class="coach_options container">
+        <%= f.input :hourly_rate, required: true, label: "Hourly rate (in Euros)" %>
+        <%= f.input :available_start_at,
+                    required: true,
+                    label: "Weekday availability from:" %>
+        <%= f.input :available_end_at, required: true, label: "to:" %>
+      </div>
+      <!-- coach options end -->
       <%= f.input :first_name, required: true %>
 
       <%= f.input :last_name, required: true %>
@@ -47,3 +56,27 @@
 
   <%= render "devise/shared/links" %>
 </div>
+
+<script>
+  const showCoachOptions = (on_off) => {
+    document.querySelector(".coach_options")
+      .style
+      .display = on_off ? "block" : "none"
+  }
+
+  const user_type = document.getElementById("user_type");
+  user_type.addEventListener("change", (event) => {
+    switch (event.currentTarget.value) {
+      case 'Coach':
+        showCoachOptions(true)
+        break
+      case 'User':
+        showCoachOptions(false)
+        break
+      default:
+        console.log("shit hit the fan")
+    }
+  })
+
+  showCoachOptions(false);
+</script>
