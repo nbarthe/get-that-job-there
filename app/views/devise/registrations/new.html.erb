@@ -9,6 +9,8 @@
 
       <%= f.input :last_name, required: true %>
 
+      <%= f.input :image_url, required: true %>
+
       <%= f.input :email,
                   required: true,
                   autofocus: true,
@@ -32,6 +34,7 @@
                     required: true,
                     label: "Weekday availability from:" %>
         <%= f.input :available_end_at, required: true, label: "to:" %>
+        <%= f.input :description, required: true %>
       </div>
       <!-- coach options end -->
 

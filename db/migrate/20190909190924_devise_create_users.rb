@@ -40,6 +40,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :occupation
       t.string :field
       t.string :city
+
       t.date :born_on
 
       t.references :appointment
@@ -48,6 +49,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :hourly_rate
       t.time :available_start_at
       t.time :available_end_at
+
 
 
 
