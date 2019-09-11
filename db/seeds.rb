@@ -10,44 +10,45 @@ puts 'Cleaning database...'
 
 # need to put last name
 
+
 User.destroy_all
-nati = User.create!(first_name: 'Nati', email: 'natibarthe29@hotmail.com', password: '123456', occupation: 'Developer', field: 'IT', city: 'Rio de Janeiro', born_on: '30/04/1991')
-andre = User.create!(first_name: 'Andre', email: 'andre2@hotmail.com', password: '123456', occupation: 'CEO', field: 'Management', city: 'Munich', born_on: '15/03/1994')
-sarra = User.create!(first_name: 'Sarra', email: 'sarra@hotmail.com', password: '123456', occupation: 'Teacher of Life', field: 'Teaching', city: 'Algiers', born_on: '03/07/1989')
-fer = User.create!(first_name: 'Fer', email: 'fer9@hotmail.com', password: '123456', occupation: 'Zumba Instructor', field: 'Teaching', city: 'Ibiza', born_on: '01/01/1940')
+natalia = User.create!(first_name: 'Tatiana', last_name: 'Gonzalez', email: 'tatiana@hotmail.com', password: '123456', occupation: 'Developer', field: 'IT', city: 'Rio de Janeiro', born_on: '30/04/1991')
+andre = User.create!(first_name: 'Che', last_name: 'Johnson', email: 'che_johnson@hotmail.com', password: '123456', occupation: 'Analyst', field: 'Finance', city: 'Munich', born_on: '15/03/1994')
+sarra = User.create!(first_name: 'Jan', last_name: 'Pesek', email: 'jan@hotmail.com', password: '123456', occupation: 'Manager', field: 'IT', city: 'Prague', born_on: '03/07/1989')
+fer = User.create!(first_name: 'Bruno', last_name:'Barthe', email: 'brunob@hotmail.com', password: '123456', occupation: 'Doctor', field: 'Medicine', city: 'Ibiza', born_on: '01/01/1940')
 
 Coach.destroy_all
 coach = Coach.create!(
-  first_name: 'Ross',
-  last_name: 'Geller',
-  email: 'ross@dino.coach',
+  first_name: 'John',
+  last_name: 'Smith',
+  email: 'johns@coaching.com',
   password: '123456',
-  description: 'I have been working with dinousours for 10 years in Ibiza. I have been part of many selection process in my life and have experience in coaching',
-  field: 'Teaching',
+  description: 'I have been working with dinousours for 10 years in Ibiza. I have been part of many selection process in my life and have experience in coaching.',
+  field: 'IT',
   hourly_rate: '100 EUR',
   city: 'Ibiza',
-  born_on: '01/01/1940',
+  born_on: '01/01/1976',
   available_start_at: '08',
   available_end_at: '18' )
 
 coach = Coach.create!(
-  first_name: 'Teddu',
-  last_name: 'Bear',
-  email: 'teddy@coach.coach',
+  first_name: 'Clara',
+  last_name: 'Souza',
+  email: 'clara@gmail.com',
   password: '123456',
-  description: 'I have been in the teddy bears industry for 20 years. I love inspiring people and helping them to become a better version of themselves',
+  description: 'I have been in the tech industry for 20 years. I love inspiring people and helping them to achieve their goals.',
   field: 'IT',
   hourly_rate: '200 EUR',
   city: 'Rio de Janeiro',
-  born_on: '01/01/1990',
+  born_on: '01/01/1980',
   available_start_at: '09',
   available_end_at: '17' )
 
 coach = Coach.create!(
-  first_name: 'Chandler',
-  last_name: 'Bing',
-  description: 'I am good at making people laugh while doing numbers. Trust me, I am your coach',
-  email: 'chandler@coach.coach',
+  first_name: 'Martin',
+  last_name: 'Zanotto',
+  description: 'I have been part of many selection process in my life and I have a coaching program that has proven to be succesfull. I understand the New York market and can help you.',
+  email: 'martinz@coaching.com',
   password: '123456',
   field: 'Accounting',
   hourly_rate: '100 EUR',
@@ -57,14 +58,14 @@ coach = Coach.create!(
   available_end_at: '18' )
 
 coach = Coach.create!(
-  first_name: 'Phoebe',
-  last_name: 'Princessconsuela',
-  email: 'phoebe@coach.coach',
-  description: 'I sing and give massages for living but also coach for fun',
+  first_name: 'Lucas',
+  last_name: 'Gomez',
+  email: 'lucasg@coaching.com',
+  description: 'I have been working as a private Lawyer for the last 15 years. I also lived abroad so I know how it feels like being in a new city. I can help you understand the rules of the game in Rio.',
   password: '123456',
   field: 'Lawyer',
   hourly_rate: '100 EUR',
-  city: 'Buenos Aires',
+  city: 'Rio de Janeiro',
   born_on: '01/01/1985',
   available_start_at: '05',
   available_end_at: '12' )
@@ -72,7 +73,7 @@ coach = Coach.create!(
 
 
 a = Appointment.new(schedule_at: '10/9/2020', payment_status: 'paid', duration: '2', user_id: '1', coach_id: '1')
-a.user = nati
+a.user = natalia
 a.coach = coach
 b = Appointment.new(schedule_at: '10/8/2020', payment_status: 'paid', duration: '1', user_id: '2', coach_id: '1')
 b.user = andre
