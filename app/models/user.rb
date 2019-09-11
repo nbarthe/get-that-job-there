@@ -5,4 +5,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :appointments
+
+  def users
+    User.where(type: "User")
+  end
 end
