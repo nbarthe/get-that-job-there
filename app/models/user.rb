@@ -11,7 +11,6 @@ class User < ApplicationRecord
   validates :field, presence: true
   validates :city, presence: true
 
-
   def users
     User.where(type: "User")
   end
