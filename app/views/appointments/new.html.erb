@@ -1,7 +1,7 @@
 <div class="container">
   <h2>Book a session with <%= @coach.first_name %></h2>
 
-  <%= simple_form_for [@user, @appointment] do |f| %>
+  <%= simple_form_for [@coach, @appointment] do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">

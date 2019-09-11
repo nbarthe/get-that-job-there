@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users do
-    resources :appointments, only: [ :new, :create ]
+    resources :appointments, only: [ :index]
   end
-  resources :coaches, only: [ :index, :show ]
+  resources :coaches, only: [ :index, :show ] do
+    resources :appointments, only: [ :index, :new, :create ]
+  end
 
   get '/pages/who-are-we', to: 'pages#who_are_we', as: 'who_are_we'
   root to: 'pages#home'
