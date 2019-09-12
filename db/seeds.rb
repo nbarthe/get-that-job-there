@@ -123,20 +123,29 @@ c.save
 d.save
 
 # random gen peep
-rand(10..100)
+
+
+descriptions = [
+  Faker::Movies::VForVendetta.speech,
+  Faker::Movies::StarWars.quote,
+  Faker::Movies::Hobbit.quote,
+  Faker::Movies::HarryPotter.quote
+]
 
 100.times  do
-  User.create!(
+  Coach.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
-  email: ,
-  description: ,
+  email: Faker::Internet.email,
+  description: descriptions.sample,
   password: '123456',
   field: Faker::Educator.subject,
-  city: ,
-  born_on: ,
-  image_url: )
-
+  city: Faker::Nation.capital_city,
+  born_on: Faker::Date.birthday(min_age: 18, max_age: 65),
+  hourly_rate: "#{rand(10..100)} EUR",
+  available_start_at: rand(8..10).to_s,
+  available_end_at: rand(17..19).to_s,
+  image_url: "")
 end
 
 puts 'Finished!'
