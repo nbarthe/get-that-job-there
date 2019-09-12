@@ -15,23 +15,32 @@
     <h2><%= @coaches.count %> coaches found in <%= params[:city].empty? ? "the World" : params[:city] %></h2>
   </div>
 
-  <div>
+  <div class="coaches-cards" >
     <% @coaches.each do |coach| %>
+
+  <!-- need to turn this to a component. Do it later
+  %= render "components/coach-index-card", locals: {coach: coach} % -->
+
+  <!-- need to refactor this link to -->
+  <!-- # link_to  , coach_path(coach), target: "_blank" -->
+
+    <a class="card-product-link" href="<%= coach_path(coach) %>" target="_blank">
       <div class="card-product">
-          <%= link_to image_tag( "#{coach.image_url ? coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob'}", :alt => "rss feed", class: 'card-trip-user avatar-square'),
-                    coach_path(coach),
-                    target: "_blank" %>
+            <%= image_tag("#{coach.image_url ? coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob'}", alt: "coach picture", class: 'card-trip-user avatar-square') %>
 
-          <div class="card-product-infos">
-            <h2><%= link_to "#{coach.first_name} #{coach.last_name}" , coach_path(coach), target: "_blank" %></h2>
-            <p>Contact: <%= coach.email %></p>
-            <p>Hourly rate: <%= coach.hourly_rate %></p>
-            <p>Field: <%= coach.field %></p>
-          </div>
+            <div class="card-product-infos">
+              <h2><%= "#{coach.first_name} #{coach.last_name}" %></h2>
+              <p><strong>Contact:</strong> <%= coach.email %></p>
+              <p><strong>Hourly rate:</strong> <%= coach.hourly_rate %></p>
+              <p><strong>Field:</strong> <%= coach.field %></p>
+              <p><strong>City:</strong> <%= coach.city %></p>
+              <p class="text-justify"><strong>Description:</strong><br><%= coach.description[0..99]+"..." %></p>
+            </div>
+        </div>
+      </a>
 
-      </div>
   <% end %>
-     <%= link_to "Back to Home", root_path %>
   </div>
+     <%= link_to "Back to Home", root_path %>
 
 </div>

@@ -1,16 +1,23 @@
+.coaches-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
 .card-product {
+  border-radius: 12px;
   overflow: hidden;
-  height: 120px;
-  background: white;
+  height: 320px;
+  width: 359px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
 }
 
 .card-product img {
   height: 100%;
-  width: 120px;
+  width: 168px;
   object-fit: cover;
+  border-radius: 4px;
 }
 
 .card-product h2 {
@@ -29,4 +36,14 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.card-product-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-product-link:hover {
+  text-decoration:none;
+  cursor:pointer;
 }
