@@ -27,5 +27,5 @@
     <p><i class="far fa-calendar-alt"></i> Availabilty: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> @ business days</p>
     <%= link_to "Book your appointment with #{@coach.first_name}",
       new_coach_appointment_path(@coach),
-      class: "btn btn-gradient", target: "_blank" %>
+      class: "btn btn-gradient"%>
 </div>
