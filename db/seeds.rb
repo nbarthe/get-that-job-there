@@ -1,15 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
 puts "Let's seed it"
 puts 'Cleaning database...'
-
-# need to put last name
-
 
 User.destroy_all
 natalia = User.create!(first_name: 'Tatiana',
@@ -129,5 +121,43 @@ a.save
 b.save
 c.save
 d.save
+
+# random gen peep
+
+
+descriptions = [
+  Faker::Movies::VForVendetta.speech,
+  Faker::Movies::StarWars.quote,
+  Faker::Movies::Hobbit.quote,
+  Faker::Movies::HarryPotter.quote
+]
+
+emails = [
+  "gmail",
+  "outlook",
+  "hotmail",
+  "yahoo"
+]
+
+puts "Creating random coaches. It's gonna take a while..."
+puts "Grab a coffee or something."
+500.times  do
+  first_name = Faker::Name.first_name
+  last_name = Faker::Name.last_name
+  email = "#{first_name}#{last_name}@#{emails.sample}.com"
+  Coach.create!(
+  first_name: first_name,
+  last_name: last_name,
+  email: email,
+  description: descriptions.sample,
+  password: '123456',
+  field: Faker::Educator.subject,
+  city: Faker::Nation.capital_city,
+  born_on: Faker::Date.birthday(min_age: 18, max_age: 65),
+  hourly_rate: "#{rand(10..100)} EUR",
+  available_start_at: rand(8..10).to_s,
+  available_end_at: rand(17..19).to_s,
+  image_url: "https://loremflickr.com/g/300/300/people")
+end
 
 puts 'Finished!'
