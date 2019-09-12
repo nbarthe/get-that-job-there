@@ -12,10 +12,46 @@ puts 'Cleaning database...'
 
 
 User.destroy_all
-natalia = User.create!(first_name: 'Tatiana', last_name: 'Gonzalez', email: 'tatiana@hotmail.com', password: '123456', occupation: 'Developer', field: 'IT', city: 'Rio de Janeiro', born_on: '30/04/1991')
-andre = User.create!(first_name: 'Che', last_name: 'Johnson', email: 'che_johnson@hotmail.com', password: '123456', occupation: 'Analyst', field: 'Finance', city: 'Munich', born_on: '15/03/1994')
-sarra = User.create!(first_name: 'Jan', last_name: 'Pesek', email: 'jan@hotmail.com', password: '123456', occupation: 'Manager', field: 'IT', city: 'Prague', born_on: '03/07/1989')
-fer = User.create!(first_name: 'Bruno', last_name:'Barthe', email: 'brunob@hotmail.com', password: '123456', occupation: 'Doctor', field: 'Medicine', city: 'Ibiza', born_on: '01/01/1940')
+natalia = User.create!(first_name: 'Tatiana',
+                       last_name: 'Gonzalez',
+                       email: 'tatiana@hotmail.com',
+                       password: '123456',
+                       occupation: 'Developer',
+                       field: 'IT',
+                       city: 'Rio de Janeiro',
+                       born_on: '30/04/1991',
+                       image_url: "https://assets.bizjournals.com/phoenix/user_media/Traci-Russell-726631*220.jpg",)
+
+andre = User.create!(first_name: 'Che',
+                       last_name: 'Johnson',
+                       email: 'che_johnson@hotmail.com',
+                       password: '123456',
+                       occupation: 'Analyst',
+                       field: 'Finance',
+                       city: 'Munich',
+                       born_on: '15/03/1994',
+                       image_url: "https://premierleague-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/man45662.png",)
+
+sarra = User.create!(first_name: 'Jan',
+                       last_name: 'Pesek',
+                       email: 'jan@hotmail.com',
+                       password: '123456',
+                       occupation: 'Manager',
+                       field: 'IT',
+                       city: 'Prague',
+                       born_on: '03/07/1989',
+                       image_url: "https://ogletree.com/app/uploads/people/jan-michelsen-515x560.jpg",)
+
+fer = User.create!(first_name: 'Bruno',
+                       last_name:'Barthe',
+                       email: 'brunob@hotmail.com',
+                       password: '123456',
+                       occupation: 'Doctor',
+                       field: 'Medicine',
+                       city: 'Ibiza',
+                       born_on: '01/01/1940',
+                       image_url: "https://images.askmen.com/1080x540/2016/01/25-021526-facebook_profile_picture_affects_chances_of_getting_hired.jpg",)
+
 
 Coach.destroy_all
 coach = Coach.create!(
@@ -29,7 +65,8 @@ coach = Coach.create!(
   city: 'Ibiza',
   born_on: '01/01/1976',
   available_start_at: '08',
-  available_end_at: '18' )
+  available_end_at: '18',
+  image_url: "https://media.gettyimages.com/photos/profile-portrait-serious-african-american-man-looking-away-picture-id697541797?s=612x612",)
 
 coach = Coach.create!(
   first_name: 'Clara',
@@ -42,7 +79,8 @@ coach = Coach.create!(
   city: 'Rio de Janeiro',
   born_on: '01/01/1980',
   available_start_at: '09',
-  available_end_at: '17' )
+  available_end_at: '17',
+  image_url: "https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg",)
 
 coach = Coach.create!(
   first_name: 'Martin',
@@ -55,7 +93,8 @@ coach = Coach.create!(
   city: 'New York',
   born_on: '01/01/1940',
   available_start_at: '08',
-  available_end_at: '18' )
+  available_end_at: '18',
+  image_url: "https://i0.wp.com/zblogged.com/wp-content/uploads/2019/02/FakeDP.jpeg?resize=567%2C580&ssl=1",)
 
 coach = Coach.create!(
   first_name: 'Lucas',
@@ -68,7 +107,8 @@ coach = Coach.create!(
   city: 'Rio de Janeiro',
   born_on: '01/01/1985',
   available_start_at: '05',
-  available_end_at: '12' )
+  available_end_at: '12',
+  image_url: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/NafSadh_Profile.jpg/768px-NafSadh_Profile.jpg",)
 
 
 
