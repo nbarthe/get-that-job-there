@@ -1,10 +1,7 @@
-.container {
-  width: 100%;
-}
 
 .col {
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
 }
 
 .first {
@@ -13,20 +10,31 @@
 }
 
 .list {
+  color: #444444;
   list-style-type: none;
+  margin: 0;
+}
+
+.list h6 {
+  font-weight: bold;
 }
 
 .list-item {
-  font-size: 14px;
-  padding-top: 10px;
+  color: grey;
+  font-size: 12px;
+  padding-top: 4px;
 }
 
 .footer {
-  float: right;
   padding-top: 10px;
-  padding-right: 15px;
+  padding-right: 5px;
   padding-bottom: 10px;
   background-color: #F5F5F5;
   font-size: 10px;
   font-weight: bold;
 }
+
+.footer-brand img {
+  width: 70px;
+}
+
