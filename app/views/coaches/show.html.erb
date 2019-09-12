@@ -9,7 +9,7 @@
         <img class="avatar-super-large" src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>"/>
       </div>
       <div class="m-3" >
-        <h1><%= "#{@coach.first_name} #{@coach.last_name}" %></h1>
+        <h2><%= "#{@coach.first_name} #{@coach.last_name}" %></h2>
         <p>
           <i class="far fa-envelope"></i> <%= @coach.email %> &sdot;
           <i class="fab fa-linkedin"></i> &sdot;
@@ -19,7 +19,7 @@
       </div>
     </div>
     <p>
-    <h5>  " <%= @coach.description  %> " </h5>
+    <p>  " <%= @coach.description  %> " </p>
     <br>
     <p><i class="fas fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
     <p><i class="fas fa-award"></i> Specialty: <%= @coach.field %></p>
