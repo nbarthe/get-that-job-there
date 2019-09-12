@@ -90,7 +90,7 @@ I’d love to connect personally with you and if you want to contact me you can 
 coach1 = Coach.create!(
   first_name: 'Manuel',
   last_name: 'Porto',
-  email: 'manuel@coaching.com',
+  email: 'manuel@gmail.com',
   password: '123456',
   description: 'It is not about telling people what to do, it is making them think on how to do it. I am a passionate Life & Business Coach working in Human Resources because I truly believe that great vision without great people is irrelevant. ',
   field: 'IT',
@@ -104,7 +104,7 @@ coach1 = Coach.create!(
 coach2 = Coach.create!(
   first_name: 'Rebecca',
   last_name: 'Martins',
-  email: 'rebecca@coaching.com',
+  email: 'rebecca@hotmail.com',
   password: '123456',
   description: 'I am a professional coach. I can help you during all your job research process from writing your resume to preparing your job interview.',
   field: 'IT',
@@ -118,7 +118,7 @@ coach2 = Coach.create!(
 coach3 = Coach.create!(
   first_name: 'Fernando',
   last_name: 'Barboro',
-  email: 'Fernando@coaching.com',
+  email: 'Fernando@gmail.com',
   password: '123456',
   description: 'Specialization Strategic Management of Teams for High Performance and Graduated in Human Resources Management at Universidade Lusíada, I have experience in different areas related to Human Resources. Since February 2018, I have been working at NetJets Europe as HR Manager. I consider myself focused on goals, determined, organized, self-motivated, a team-player, creative and solution-oriented, with analysis, training and leadership skills.
 
@@ -134,7 +134,7 @@ coach3 = Coach.create!(
 coach4 = Coach.create!(
   first_name: 'Pamela',
   last_name: 'Marinelli',
-  email: 'pamela@coaching.com',
+  email: 'pamela@gmail.com',
   password: '123456',
   description: 'Pamela can work worldwide, coaching anyone across the globe with internet access. Her personable character coupled with her knowledge of what manager’s desire in potential hires is what makes her sessions such a success!
 
@@ -150,16 +150,48 @@ Karen recently completed training as a Career Development Facilitator at the Uni
 coach5 = Coach.create!(
   first_name: 'Jean',
   last_name: 'Le français',
-  email: 'jean@coaching.com',
+  email: 'jean@yahoo.fr',
   password: '123456',
-  description: '',
+  description: 'I am an IT recruiter with 10 years of experience. I offer my coaching services to help foreigners looking for a job in France especially in Paris.
+  I can help you in all the process from the resume to the salary negociation and the job interview',
   field: 'Marketing',
   hourly_rate: '95 EUR',
   city: 'Paris',
   born_on: '06/06/1982',
   available_start_at: '08',
   available_end_at: '18',
-  image_url: "https://www.superprof.fr/images/annonces/professeur-home-cours-particuliers-langue-culture-italienne-professeure-diplomee-experimentee.jpg",)
+  image_url: "https://www.superprof.fr/images/annonces/professeur-home-professeurs-reussir-concours-ecoles-architecture-orientation-lettre-motivation-dossier-artistique.jpg",)
+
+coach6 = Coach.create!(
+  first_name: 'Andre',
+  last_name: 'Ghaib',
+  email: 'andre@yahoo.fr',
+  password: '123456',
+  description: 'I am an arecruiter with 20 years of experience in the tech industry. I offer my coaching services to help foreigners looking for a job in France especially in Paris.
+  I can help you in all the process from the resume to the salary negociation and the job interview',
+  field: 'IT and sales',
+  hourly_rate: '50 EUR',
+  city: 'Porto',
+  born_on: '06/06/1982',
+  available_start_at: '08',
+  available_end_at: '18',
+  image_url: "https://www.superprof.fr/images/annonces/professeur-home-natif-anglophone-polyglotte-parle-dix-langues-experience-professeur-apprendra-totalite.jpg",)
+
+coach7 = Coach.create!(
+  first_name: 'Carolina',
+  last_name: 'Anderson',
+  email: 'carolina@gmail.com',
+  password: '123456',
+  description: 'I am passionate about coaching and helping people reaching their goals. I offer my coaching services to help foreigners looking for a job in France especially in Paris.
+  I can help you in all the process from the resume to the salary negociation and the job interview',
+  field: 'human ressources',
+  hourly_rate: '200 EUR',
+  city: 'Porto',
+  born_on: '06/06/1982',
+  available_start_at: '08',
+  available_end_at: '18',
+  image_url: "https://www.superprof.fr/images/annonces/professeur-home-formatrice-anglais-britannique-cpf-accepte-reduction-impots-toeic-toefl-conversation-entretiens-concours.jpg",)
+
 
 coacha = Coach.create!(
   first_name: 'Jon',
