@@ -12,7 +12,7 @@
               <h2>This week</h2>
               <% @appointments.each do |appointment| %>
               <p>You have a meeting with <strong><%= Coach.find(appointment.coach_id).first_name %></strong>
-                  at <%= appointment.schedule_at %> for <%= pluralize( appointment.duration, 'hour' ) %>
+                  at <%= appointment.start_time %> for <%= pluralize( appointment.duration, 'hour' ) %>
                 </p>
                 <% end %>
             </div>

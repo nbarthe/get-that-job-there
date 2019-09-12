@@ -17,7 +17,6 @@ class AppointmentsController < ApplicationController
     @user = current_user
     @appointment.user = @user
     @appointment.coach = @coach
-    binding.pry
     if @appointment.save
       redirect_to user_appointments_path(@user)
     else
