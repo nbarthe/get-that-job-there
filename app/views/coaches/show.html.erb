@@ -6,7 +6,7 @@
     <hr>
     <div class="d-flex justify-content-left">
       <div class="">
-        <img class="avatar-super-large" src="https://avatars0.githubusercontent.com/u/51202659?v=4"/>
+        <img class="avatar-super-large" src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>"/>
       </div>
       <div class="m-3" >
         <h1><%= "#{@coach.first_name} #{@coach.last_name}" %></h1>
