@@ -15,8 +15,11 @@
   <% @coaches.each do |coach| %>
 
   <div class="card-product">
-       <img src="<%= coach.image_url ? coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>" class="card-trip-user avatar-square"/>
-       <div class="card-product-infos">
+      <%= link_to image_tag( "#{coach.image_url ? coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob'}", :alt => "rss feed", class: 'card-trip-user avatar-square'),
+                coach_path(coach),
+                target: "_blank" %>
+
+      <div class="card-product-infos">
       <h2><%= link_to "#{coach.first_name} #{coach.last_name}" , coach_path(coach), target: "_blank" %></h2>
       <p>Contact: <%= coach.email %></p>
       <p>Hourly rate: <%= coach.hourly_rate %></p>
