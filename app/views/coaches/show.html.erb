@@ -1,30 +1,29 @@
+<hr class="mt-0">
 <div class="container">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">
-    <%= @coach.first_name %> <%= @coach.last_name %>'s profile
-  </div>
-  <br>
-    <hr>
-    <div class="d-flex justify-content-left">
-      <div class="">
+
+    <div class="d-flex justify-content-between align-items-center">
         <img class="avatar-super-large" src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>"/>
-      </div>
-      <div class="m-3" >
+      <div class="m-3 flex-grow-1">
         <h2><%= "#{@coach.first_name} #{@coach.last_name}" %></h2>
-        <p>
+
+        <p class="m-0">
           <i class="far fa-envelope"></i> <%= @coach.email %> &sdot;
           <i class="fab fa-linkedin"></i> &sdot;
           <i class="fab fa-twitter-square"></i> &sdot;
           <i class="fab fa-instagram"></i>
         <p>
+
+        <div class="coach-assets">
+          <p class="m-0"><i class="fas fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
+          <p class="m-0"><i class="fas fa-award"></i> Specialty: <%= @coach.field %></p>
+          <p class="m-0"><i class="fas fa-dollar-sign"></i> <%= @coach.hourly_rate %> / hour</p>
+          <p class="m-0"><i class="far fa-calendar-alt"></i> Availability: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> @ business days</p>
+        </div>
       </div>
     </div>
     <p>
-    <p>  " <%= @coach.description  %> " </p>
+    <p class="text-justify">"<%= @coach.description  %>"</p>
     <br>
-    <p><i class="fas fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
-    <p><i class="fas fa-award"></i> Specialty: <%= @coach.field %></p>
-    <p><i class="fas fa-dollar-sign"></i> <%= @coach.hourly_rate %> / hour</p>
-    <p><i class="far fa-calendar-alt"></i> Availabilty: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> @ business days</p>
     <%= link_to "Book your appointment with #{@coach.first_name}",
       new_coach_appointment_path(@coach),
       class: "btn btn-gradient"%>
