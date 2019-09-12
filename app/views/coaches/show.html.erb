@@ -6,7 +6,7 @@
   <br>
 
   <div class="card-product">
-       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-square"/>
+       <img src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>" class="card-trip-user avatar-square"/>
        <div class="card-product-infos">
       <p><strong>Name:</strong> <%= "#{@coach.first_name} #{@coach.last_name}" %></p>
       <p><strong>Contact:</strong> <%= @coach.email %></p>
@@ -24,8 +24,5 @@
   <%= link_to "Book an appointment with #{@coach.first_name}",
               new_coach_appointment_path(@coach),
               class: "btn btn-gradient" %>
-
-
-
 
 </div>
