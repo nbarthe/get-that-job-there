@@ -1,9 +1,9 @@
 <hr class="mt-0">
 <div class="container">
 
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-around align-items-center">
         <img class="avatar-super-large" src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>"/>
-      <div class="m-3 flex-grow-1">
+      <div class="m-3">
         <h2><%= "#{@coach.first_name} #{@coach.last_name}" %></h2>
 
         <p class="m-0">
@@ -20,11 +20,13 @@
           <p class="m-0"><i class="far fa-calendar-alt"></i> Availability: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> @ business days</p>
         </div>
       </div>
+
+      <%= link_to "Book an appointment with #{@coach.first_name}",
+        new_coach_appointment_path(@coach),
+        class: "btn btn-gradient btn-lg"%>
+
     </div>
     <p>
     <p class="text-justify">"<%= @coach.description  %>"</p>
     <br>
-    <%= link_to "Book your appointment with #{@coach.first_name}",
-      new_coach_appointment_path(@coach),
-      class: "btn btn-gradient"%>
 </div>
