@@ -4,12 +4,10 @@
 
     <p>Discover coaches in <%= params[:city].capitalize%></p>
    </div>
+  <div class="my-4">
 
-
-
-  <br>
-  <br>
-  <br>
+  <%= render "components/search-again-form" %>
+  </div>
 
   <div>
   <% @coaches.each do |coach| %>
