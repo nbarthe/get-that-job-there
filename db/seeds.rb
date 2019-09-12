@@ -3,6 +3,8 @@ require 'faker'
 puts "Let's seed it"
 puts 'Cleaning database...'
 
+# create manual users
+
 User.destroy_all
 natalia = User.create!(first_name: 'Tatiana',
                        last_name: 'Gonzalez',
@@ -45,8 +47,10 @@ fer = User.create!(first_name: 'Bruno',
                        image_url: "https://images.askmen.com/1080x540/2016/01/25-021526-facebook_profile_picture_affects_chances_of_getting_hired.jpg",)
 
 
+# create manual coaches
+
 Coach.destroy_all
-coach = Coach.create!(
+coacha = Coach.create!(
   first_name: 'Jon',
   last_name: 'Stark',
   email: 'jons@coaching.com',
@@ -60,7 +64,7 @@ coach = Coach.create!(
   available_end_at: '18',
   image_url: "https://likewise-stage.azureedge.net/uploads/08c59258-c3ce-40b5-a0e0-fcac6a062f5d/Jon_Snow.jpg",)
 
-coach = Coach.create!(
+coachb = Coach.create!(
   first_name: 'Clara',
   last_name: 'Souza',
   email: 'clara@gmail.com',
@@ -74,7 +78,7 @@ coach = Coach.create!(
   available_end_at: '17',
   image_url: "https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg",)
 
-coach = Coach.create!(
+coachc = Coach.create!(
   first_name: 'Martin',
   last_name: 'Zanotto',
   description: 'I have been part of many selection process in my life and I have a coaching program that has proven to be succesfull. I understand the New York market and can help you.',
@@ -88,7 +92,7 @@ coach = Coach.create!(
   available_end_at: '18',
   image_url: "https://i0.wp.com/zblogged.com/wp-content/uploads/2019/02/FakeDP.jpeg?resize=567%2C580&ssl=1",)
 
-coach = Coach.create!(
+coachd = Coach.create!(
   first_name: 'Lucas',
   last_name: 'Gomez',
   email: 'lucasg@coaching.com',
@@ -106,25 +110,23 @@ coach = Coach.create!(
 
 a = Appointment.new(schedule_at: '10/9/2020', payment_status: 'paid', duration: '2', user_id: '1', coach_id: '1')
 a.user = natalia
-a.coach = coach
+a.coach = coacha
 b = Appointment.new(schedule_at: '10/8/2020', payment_status: 'paid', duration: '1', user_id: '2', coach_id: '1')
 b.user = andre
-b.coach = coach
+b.coach = coachb
 c = Appointment.new(schedule_at: '10/7/2020', payment_status: 'paid', duration: '1', user_id: '4', coach_id: '1')
 c.user = sarra
-c.coach = coach
+c.coach = coachc
 d= Appointment.new(schedule_at: '10/10/2020', payment_status: 'paid', duration: '1', user_id: '3', coach_id: '1')
 d.user = fer
-d.coach = coach
+d.coach = coachd
 
 a.save
 b.save
 c.save
 d.save
 
-# random gen peep
-
-
+# random generate Coaches
 descriptions = [
   Faker::Movies::VForVendetta.speech,
   Faker::Movies::StarWars.quote,
