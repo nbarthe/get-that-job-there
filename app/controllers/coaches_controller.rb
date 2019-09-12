@@ -1,4 +1,5 @@
 class CoachesController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index]
   def index
     @coaches = Coach.where(Coach.arel_table[:city]
     .lower
