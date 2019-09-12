@@ -6,6 +6,16 @@ puts 'Cleaning database...'
 # create manual users
 
 User.destroy_all
+sarra = User.create!(first_name: 'Sarra',
+                       last_name: 'Ghaib',
+                       email: 'sarra@hotmail.com',
+                       password: '123456',
+                       occupation: 'Developer',
+                       field: 'IT',
+                       city: 'Rio de Janeiro',
+                       born_on: '30/04/1991',
+                       image_url: "https://avatars1.githubusercontent.com/u/51202659?s=460&v=4",)
+
 natalia = User.create!(first_name: 'Tatiana',
                        last_name: 'Gonzalez',
                        email: 'tatiana@hotmail.com',
@@ -50,6 +60,107 @@ fer = User.create!(first_name: 'Bruno',
 # create manual coaches
 
 Coach.destroy_all
+
+coach0 = Coach.create!(
+  first_name: 'Patricia',
+  last_name: 'Barreto',
+  email: 'patricia@coaching.com',
+  password: '123456',
+  description: 'Are you looking for someone to coah you for your job interview ?
+I am Paula, I am passionate about people and how can they improve and grow in the different areas of their lives.
+
+I started as a Social Educator gaining a large experience in training in different types of teams from social research teams to social intervention teams. From this experience I became Mediator, Conflict Manager, Personal Developer, Cross-Cultural Manager and acquired many Intercultural Skills.
+
+My Professional Career evolved from the Social world to the aviation world. I learned to provide the best Customer Service, Promoting and Coordinating an outstanding co-operative teamwork, as a Cabin Crew Manager.
+
+After this fantastic experience she decided it was time to follow the dream and I became a Certified Coach.
+
+As a Career Coach, I am passionate to support and challenge people in their professional area. I triggers in people endless possibilities and options that will turn into massive action towards the desired goal.
+
+I’d love to connect personally with you and if you want to contact me you can find me here!
+',
+  field: 'IT',
+  hourly_rate: '60 EUR',
+  city: 'Porto',
+  born_on: '01/01/1976',
+  available_start_at: '08',
+  available_end_at: '18',
+  image_url: "https://www.superprof.fr/images/annonces/professeur-home-jouez-piano-plaisir-jouer-passion-piano.jpg",)
+
+coach1 = Coach.create!(
+  first_name: 'Manuel',
+  last_name: 'Porto',
+  email: 'manuel@coaching.com',
+  password: '123456',
+  description: 'It is not about telling people what to do, it is making them think on how to do it. I am a passionate Life & Business Coach working in Human Resources because I truly believe that great vision without great people is irrelevant. ',
+  field: 'IT',
+  hourly_rate: '150 EUR',
+  city: 'Porto',
+  born_on: '01/06/1982',
+  available_start_at: '08',
+  available_end_at: '18',
+  image_url: "https://www.superprof.fr/images/annonces/professeur-home-superviseur-propose-cours-maya-zbrush-photoshop-photographie-retouches-preparation-concours-projets-fin.jpg",)
+
+coach2 = Coach.create!(
+  first_name: 'Rebecca',
+  last_name: 'Martins',
+  email: 'rebecca@coaching.com',
+  password: '123456',
+  description: 'I am a professional coach. I can help you during all your job research process from writing your resume to preparing your job interview.',
+  field: 'IT',
+  hourly_rate: '85 EUR',
+  city: 'Porto',
+  born_on: '06/06/1982',
+  available_start_at: '08',
+  available_end_at: '18',
+  image_url: "https://www.superprof.fr/images/annonces/professeur-home-cours-conversations-anglais-espagnol-francais-etudiants-professionnels-paris-banlieue-ouest.jpg",)
+
+coach3 = Coach.create!(
+  first_name: 'Fernando',
+  last_name: 'Barboro',
+  email: 'Fernando@coaching.com',
+  password: '123456',
+  description: 'Specialization Strategic Management of Teams for High Performance and Graduated in Human Resources Management at Universidade Lusíada, I have experience in different areas related to Human Resources. Since February 2018, I have been working at NetJets Europe as HR Manager. I consider myself focused on goals, determined, organized, self-motivated, a team-player, creative and solution-oriented, with analysis, training and leadership skills.
+
+5 steps for success: Self-Motivation | Engagement | Focus and Planning | Overcoming | People ',
+  field: 'IT',
+  hourly_rate: '100 EUR',
+  city: 'Porto',
+  born_on: '06/06/1982',
+  available_start_at: '08',
+  available_end_at: '18',
+  image_url: "https://www.superprof.fr/images/annonces/professeur-home-professeur-mathematiques-specialiste-preparation-hec-pedagogue-professionnel-experimente.jpg",)
+
+coach4 = Coach.create!(
+  first_name: 'Pamela',
+  last_name: 'Marinelli',
+  email: 'pamela@coaching.com',
+  password: '123456',
+  description: 'Pamela can work worldwide, coaching anyone across the globe with internet access. Her personable character coupled with her knowledge of what manager’s desire in potential hires is what makes her sessions such a success!
+
+Karen recently completed training as a Career Development Facilitator at the University of Wisconsin. This accreditation broadens her current skill set and allows her to administer career assessments and job search strategies for candidates seeking clarification in the industry that best matches their skills and strengths.  Karen resides in Wisconsin with her three children, husband, and their dog, Oreo.',
+  field: 'IT',
+  hourly_rate: '90 EUR',
+  city: 'Porto',
+  born_on: '06/06/1982',
+  available_start_at: '08',
+  available_end_at: '18',
+  image_url: "https://www.superprof.fr/images/annonces/professeur-home-cours-particuliers-langue-culture-italienne-professeure-diplomee-experimentee.jpg",)
+
+coach5 = Coach.create!(
+  first_name: 'Jean',
+  last_name: 'Le français',
+  email: 'jean@coaching.com',
+  password: '123456',
+  description: '',
+  field: 'Marketing',
+  hourly_rate: '95 EUR',
+  city: 'Paris',
+  born_on: '06/06/1982',
+  available_start_at: '08',
+  available_end_at: '18',
+  image_url: "https://www.superprof.fr/images/annonces/professeur-home-cours-particuliers-langue-culture-italienne-professeure-diplomee-experimentee.jpg",)
+
 coacha = Coach.create!(
   first_name: 'Jon',
   last_name: 'Stark',
