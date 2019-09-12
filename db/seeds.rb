@@ -47,18 +47,18 @@ fer = User.create!(first_name: 'Bruno',
 
 Coach.destroy_all
 coach = Coach.create!(
-  first_name: 'John',
-  last_name: 'Smith',
-  email: 'johns@coaching.com',
+  first_name: 'Jon',
+  last_name: 'Stark',
+  email: 'jons@coaching.com',
   password: '123456',
-  description: 'I have been working with dinousours for 10 years in Ibiza. I have been part of many selection process in my life and have experience in coaching.',
-  field: 'IT',
+  description: 'My father taught me big men fall just as quick as little ones if you put a sword through their hearts.',
+  field: 'Walls',
   hourly_rate: '100 EUR',
   city: 'Ibiza',
   born_on: '01/01/1976',
   available_start_at: '08',
   available_end_at: '18',
-  image_url: "https://media.gettyimages.com/photos/profile-portrait-serious-african-american-man-looking-away-picture-id697541797?s=612x612",)
+  image_url: "https://likewise-stage.azureedge.net/uploads/08c59258-c3ce-40b5-a0e0-fcac6a062f5d/Jon_Snow.jpg",)
 
 coach = Coach.create!(
   first_name: 'Clara',
