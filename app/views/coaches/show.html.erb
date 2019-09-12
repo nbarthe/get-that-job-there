@@ -1,28 +1,31 @@
 <div class="container">
-
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">
-    <%= @coach.first_name %> <%= @coach.last_name %> profile
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">
+    <%= @coach.first_name %> <%= @coach.last_name %>'s profile
   </div>
   <br>
-
-  <div class="card-product">
-       <img src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>" class="card-trip-user avatar-square"/>
-       <div class="card-product-infos">
-      <p><strong>Name:</strong> <%= "#{@coach.first_name} #{@coach.last_name}" %></p>
-      <p><strong>Contact:</strong> <%= @coach.email %></p>
-      <p><strong>Hourly </strong>rate: <%= @coach.hourly_rate %></p>
-      <p><strong>Area of expertise:</strong> <%= @coach.field %></p>
-      <p><strong>City:</strong> <%= @coach.city %></p>
-
+    <hr>
+    <div class="d-flex justify-content-left">
+      <div class="">
+        <img class="avatar-super-large" src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>"/>
+      </div>
+      <div class="m-3" >
+        <h1><%= "#{@coach.first_name} #{@coach.last_name}" %></h1>
+        <p>
+          <i class="far fa-envelope"></i> <%= @coach.email %> &sdot;
+          <i class="fab fa-linkedin"></i> &sdot;
+          <i class="fab fa-twitter-square"></i> &sdot;
+          <i class="fab fa-instagram"></i>
+        <p>
+      </div>
     </div>
-   </div>
-  <br>
-
-  <h3>Description</h3>
-  <p class="text-justify"><%= @coach.description %></p>
-
-  <%= link_to "Book an appointment with #{@coach.first_name}",
-              new_coach_appointment_path(@coach),
-              class: "btn btn-gradient" %>
-
+    <p>
+    <h5>  " <%= @coach.description  %> " </h5>
+    <br>
+    <p><i class="fas fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
+    <p><i class="fas fa-award"></i> Specialty: <%= @coach.field %></p>
+    <p><i class="fas fa-dollar-sign"></i> <%= @coach.hourly_rate %> / hour</p>
+    <p><i class="far fa-calendar-alt"></i> Availabilty: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> @ business days</p>
+    <%= link_to "Book your appointment with #{@coach.first_name}",
+      new_coach_appointment_path(@coach),
+      class: "btn btn-gradient", target: "_blank" %>
 </div>
