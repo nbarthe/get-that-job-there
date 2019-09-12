@@ -24,11 +24,11 @@
   <!-- need to refactor this link to -->
   <!-- # link_to  , coach_path(coach), target: "_blank" -->
 
-    <a class="card-product-link" href="<%= coach_path(coach) %>" target="_blank">
-      <div class="card-product">
+    <a class="coaches-card-link" href="<%= coach_path(coach) %>" target="_blank">
+      <div class="coaches-card">
             <%= image_tag("#{coach.image_url ? coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob'}", alt: "coach picture", class: 'card-trip-user avatar-square') %>
 
-            <div class="card-product-infos">
+            <div class="coaches-card-infos">
               <h2><%= "#{coach.first_name} #{coach.last_name}" %></h2>
               <p><strong>Contact:</strong> <%= coach.email %></p>
               <p><strong>Hourly rate:</strong> <%= coach.hourly_rate %></p>
