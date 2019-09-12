@@ -6,27 +6,39 @@
       <div class="m-3">
         <h2><%= "#{@coach.first_name} #{@coach.last_name}" %></h2>
 
-        <p class="m-0">
-          <i class="far fa-envelope"></i> <%= @coach.email %> &sdot;
-          <i class="fab fa-linkedin"></i> &sdot;
-          <i class="fab fa-twitter-square"></i> &sdot;
-          <i class="fab fa-instagram"></i>
+        <p>
+          <a href="mailto:<%= @coach.email %>?Subject=Hello%20<%= @coach.first_name %>!">
+           <i class="far fa-2x fa-envelope"></i>
+           <%= @coach.email %>
+           </a>
+          <a class='todo' href=""><i class="fab fa-2x fa-linkedin ml-2"></i></a>
+          <a class='todo' href=""><i class="fab fa-2x fa-twitter-square"></i></a>
+          <a class='todo' href=""><i class="fab fa-2x fa-instagram"></i></a>
         <p>
 
-        <div class="coach-assets">
-          <p class="m-0"><i class="fas fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
-          <p class="m-0"><i class="fas fa-award"></i> Specialty: <%= @coach.field %></p>
-          <p class="m-0"><i class="fas fa-dollar-sign"></i> <%= @coach.hourly_rate %> / hour</p>
-          <p class="m-0"><i class="far fa-calendar-alt"></i> Availability: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> @ business days</p>
+        <div>
+          <p class="m-0"><i class="fas fa-lg fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
+          <p class="m-0"><i class="fas fa-lg fa-award"></i> Specialty: <%= @coach.field %></p>
+          <p class="m-0"><i class="fas fa-lg fa-dollar-sign"></i> <%= @coach.hourly_rate %> / hour</p>
+          <p class="m-0"><i class="far fa-lg fa-calendar-alt"></i> Availability: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> on business days</p>
         </div>
       </div>
 
       <%= link_to "Book an appointment with #{@coach.first_name}",
         new_coach_appointment_path(@coach),
-        class: "btn btn-gradient btn-lg"%>
+        class: "btn btn-gradient"%>
 
     </div>
     <p>
     <p class="text-justify">"<%= @coach.description  %>"</p>
     <br>
 </div>
+
+<script>
+  document.querySelectorAll(".todo").forEach(anchor => {
+    anchor.addEventListener("click", event => {
+    alert("Hello, <%= current_user.first_name %>! This feature is not yet implemented. But thanks for showing your interest. It helps us to prioritize.")
+    })
+  })
+
+</script>
