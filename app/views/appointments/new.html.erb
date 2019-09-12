@@ -7,12 +7,16 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :schedule_at %>
+      <%= month_calendar do |date| %>
+      <%= date.day %>
+      <% end %>
+
       <%= f.input :duration, label: "Duration (in hours)" %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Book a session with #{@coach.first_name}", class: "btn btn-primary btn-block btn-lg" %>
+      <%= f.button :submit, "Book", class: "btn btn-primary btn-block btn-lg" %>
+
     </div>
-  <% end %>
+    <% end %>
 </div>

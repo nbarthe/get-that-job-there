@@ -1,5 +1,5 @@
 class Appointment < ApplicationRecord
-  ATTRIBUTES = %i[schedule_at duration user_id coach_id]
+  ATTRIBUTES = %i[schedule_at duration user_id coach_id start_time end_time]
   belongs_to :user
   belongs_to :coach
 
