@@ -1,0 +1,57 @@
+.coaches-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.coaches-card {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 320px;
+  width: 359px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+}
+
+.coaches-card img {
+  height: 100%;
+  width: 168px;
+  // sometimes this breaks. need to solve
+  object-fit: cover;
+  border-radius: 4px;
+  transition: width 1s;
+}
+
+.coaches-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.coaches-card p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.coaches-card .coaches-card-infos {
+  padding: 16px;
+}
+
+.coaches-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.coaches-card-link:hover img{
+  width: 56%;
+  object-fit: cover;
+}
+
+.coaches-card-link:hover {
+  color: inherit;
+  text-decoration:none;
+  cursor:pointer;
+}
