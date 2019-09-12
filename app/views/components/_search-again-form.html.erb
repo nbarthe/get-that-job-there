@@ -1,6 +1,6 @@
 <form novalidate="novalidate" class="simple_form search" action="/coaches" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
   <div class="search-form-control form-group">
-    <input autofocus class="search-form form-control string required" type="text" name="city" id="search_query" placeholder="Not <%= params[:city].empty? ? "what you looked for" : params[:city] %>?" />
+    <input autofocus class="search-form form-control string required" type="text" name="city" id="search_query" placeholder="Not <%= params[:city].empty? ? "what you looked for" : params[:city].capitalize %>?" />
     <button name="button" type="submit" class="btn btn-flat">
       <i class="fas fa-search"></i> Search in another city
     </button>
