@@ -132,7 +132,8 @@ descriptions = [
   Faker::Movies::HarryPotter.quote
 ]
 
-100.times  do
+puts "Creating random coaches. It's gonna take a while"
+500.times  do
   Coach.create!(
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name,
