@@ -132,12 +132,23 @@ descriptions = [
   Faker::Movies::HarryPotter.quote
 ]
 
-puts "Creating random coaches. It's gonna take a while"
+emails = [
+  "gmail",
+  "outlook",
+  "hotmail",
+  "yahoo"
+]
+
+puts "Creating random coaches. It's gonna take a while..."
+puts "Grab a coffee or something."
 500.times  do
+  first_name = Faker::Name.first_name
+  last_name = Faker::Name.last_name
+  email = "#{first_name}#{last_name}@#{emails.sample}.com"
   Coach.create!(
-  first_name: Faker::Name.first_name,
-  last_name: Faker::Name.last_name,
-  email: Faker::Internet.email,
+  first_name: first_name,
+  last_name: last_name,
+  email: email,
   description: descriptions.sample,
   password: '123456',
   field: Faker::Educator.subject,
