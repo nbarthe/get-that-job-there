@@ -1,5 +1,16 @@
 <h2 class="text-center">Book a session with <%= @coach.first_name %></h2>
 <br>
+  <div class="container">
+    <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+      <h2>Flatpickr Demo</h2>
+
+      <%= simple_form_for :search, method: "get" do |f| %>
+        <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.button :submit, "Go", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
 <div class="d-flex justify-content-center">
 
 
@@ -7,15 +18,13 @@
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= month_calendar do |date| %>
-      <%= date.day %>
-      <% end %>
 
       <%= f.input :duration, label: "Duration (in hours)" %>
     </div>
 
     <div class="form-actions">
       <%= f.button :submit, "Book", class: "btn btn-primary btn-block btn-lg" %>
+
     </div>
     <% end %>
 </div>
