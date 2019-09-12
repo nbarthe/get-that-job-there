@@ -145,7 +145,7 @@ descriptions = [
   hourly_rate: "#{rand(10..100)} EUR",
   available_start_at: rand(8..10).to_s,
   available_end_at: rand(17..19).to_s,
-  image_url: "")
+  image_url: "https://loremflickr.com/g/300/300/people")
 end
 
 puts 'Finished!'
