@@ -34,7 +34,13 @@
               <p><strong>Hourly rate:</strong> <%= coach.hourly_rate %></p>
               <p><strong>Field:</strong> <%= coach.field %></p>
               <p><strong>City:</strong> <%= coach.city %></p>
-              <p class="text-justify"><strong>Description:</strong><br><%= coach.description[0..99]+"..." %></p>
+              <p class="text-justify"><strong>Description:</strong><br>
+                <% if coach.description.length > 149 %>
+                  <%= coach.description[0..149]+"..." %>
+                <% else %>
+                  <%= coach.description %>
+                <% end %>
+              </p>
             </div>
         </div>
       </a>
