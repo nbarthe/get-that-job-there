@@ -1,10 +1,12 @@
 <div class="container">
-
   <!-- old url
     https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60 -->
-  <div class="card-category" style="background-size: cover; background-position: center; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://loremflickr.com/g/1110/198/<%=params[:city].gsub(" ", "")%>)">
+  <div class="card-category" style="background-size: cover; background-position: center; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url(
+        <%= params[:city].empty? ? "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1110&q=198" : "https://loremflickr.com/g/1110/198/<%=params[:city].gsub(" ", "")" %>
+      )">
     <div class="text-center">
-      <p>Discover coaches in <br> <%= params[:city].empty? ? "the World" : params[:city] %></p>
+      <p>Discover coaches in <br> <%= params[:city].empty? ? "the World" : params[:city].capitalize %></p>
     </div>
    </div>
   <div class="my-4">
@@ -12,7 +14,7 @@
 
   </div>
   <div class="mb-4">
-    <h2><%= @coaches.count %> coaches found in <%= params[:city].empty? ? "the World" : params[:city] %></h2>
+    <h2><%= @coaches.count %> coaches found in <%= params[:city].empty? ? "the World" : params[:city].capitalize %></h2>
   </div>
 
   <div class="coaches-cards" >
@@ -30,13 +32,16 @@
 
             <div class="coaches-card-infos">
               <h2><%= "#{coach.first_name} #{coach.last_name}" %></h2>
-              <p><strong>Contact:</strong> <%= coach.email %></p>
-              <p><strong>Hourly rate:</strong> <%= coach.hourly_rate %></p>
-              <p><strong>Field:</strong> <%= coach.field %></p>
-              <p><strong>City:</strong> <%= coach.city %></p>
+              <br>
+              <p ><i class="fas fa-lg fa-map-marked-alt"></i> City: <%= coach.city  %></p>
+              <p ><i class="fas fa-lg fa-award"></i> Specialty: <%= coach.field %></p>
+              <p ><i class="fas fa-lg fa-dollar-sign"></i> <%= coach.hourly_rate %> / hour</p>
+              <p ><i class="far fa-lg fa-calendar-alt"></i> <%=   coach.available_start_at.strftime("%d AM") %> to <%= coach.available_end_at.strftime("%d PM") %></p>
+
+
               <p class="text-justify"><strong>Description:</strong><br>
-                <% if coach.description.length > 149 %>
-                  <%= coach.description[0..149]+"..." %>
+                <% if coach.description.length > 99 %>
+                  <%= coach.description[0..99]+"..." %>
                 <% else %>
                   <%= coach.description %>
                 <% end %>
@@ -44,9 +49,6 @@
             </div>
         </div>
       </a>
-
-  <% end %>
+    <% end %>
   </div>
-     <%= link_to "Back to Home", root_path %>
-
 </div>
