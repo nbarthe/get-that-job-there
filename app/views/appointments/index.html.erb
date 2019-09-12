@@ -1,32 +1,28 @@
 <div class="container">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);">
-    Appointments
+    <%= current_user.first_name  %> ' s Appointments
   </div>
   <br>
-  <p class="text-center">Hello <%= current_user.first_name %>! Here are your appointments!</p>
+  <p class="text-center"> </p>
 
   <div class="container">
     <ol>
+
       <!-- this should be cards -->
       <% @appointments.each do |appointment| %>
-          <li class="row card-product m-2">
-            <div class="col-4 text-center">
-             <strong>Scheduled at:</strong>
-             <br>
-             <%= appointment.schedule_at %>
-            </div>
-            <div class="col-4 text-center">
-              <strong>Duration:</strong>
-              <br>
-               <%= appointment.duration %> hours
-            </div>
-            <div class="col-4 text-center">
-              <strong>Coach:</strong>
-              <br>
-               <%= Coach.find(appointment.coach_id).first_name %>
-            </div>
+          <li class="card-product">
+            <div class="text-center">
+             This week: <br>
+             You have a meeting with <strong><%= Coach.find(appointment.coach_id).first_name %></strong>
+             at <%= appointment.schedule_at %> for <%= pluralize( appointment.duration, 'hour' ) %>
+
+             </div>
           </li>
-      <% end %>
+
     </ol>
+
+    </div>
   </div>
 </div>
+
+<% end %>
