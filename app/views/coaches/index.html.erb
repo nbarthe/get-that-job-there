@@ -2,7 +2,9 @@
   <!-- old url
     https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60 -->
   <div class="card-category" style="background-size: cover; background-position: center; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://loremflickr.com/g/1110/198/<%=params[:city].gsub(" ", "")%>)">
-    <p>Discover coaches in <%= params[:city].capitalize%></p>
+    <div class="text-center">
+      <p>Discover coaches in <br> <%= params[:city].empty? ? "the World" : params[:city] %></p>
+    </div>
    </div>
   <div class="my-4">
 
