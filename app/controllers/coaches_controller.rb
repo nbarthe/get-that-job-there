@@ -3,10 +3,12 @@ class CoachesController < ApplicationController
   def index
     @coaches = Coach.where(Coach.arel_table[:city]
     .lower
-    .matches("%#{params[:city].downcase}%"))
-    if @coaches.present?
-      @coaches
-    else redirect_to root_path
+    .matches("#{params[:city].downcase}"))
+
+    unless @coaches.present?
+      @coaches = Coach.where(Coach.arel_table[:city]
+        .lower
+        .matches("%#{params[:city].downcase}%"))
     end
   end
 

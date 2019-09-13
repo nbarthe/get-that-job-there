@@ -14,12 +14,16 @@
 }
 
 .coaches-card img {
-  height: 100%;
+  // height: 100%;
   width: 168px;
   // sometimes this breaks. need to solve
   object-fit: cover;
   border-radius: 4px;
   transition: width 1s;
+}
+
+.coaches-card-link:hover img{
+  width: 201px;
 }
 
 .coaches-card h2 {
@@ -45,10 +49,7 @@
   text-decoration: none;
 }
 
-.coaches-card-link:hover img{
-  width: 56%;
-  object-fit: cover;
-}
+
 
 .coaches-card-link:hover {
   color: inherit;

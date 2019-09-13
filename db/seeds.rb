@@ -158,7 +158,7 @@ coach5 = Coach.create!(
   I can help you in all the process from the resume to the salary negociation and the job interview',
   field: 'Marketing',
   hourly_rate: '95',
-  city: 'Paris',
+  city: 'Porto',
   born_on: '06/06/1982',
   available_start_at: '01:00:00',
   available_end_at: '18',
@@ -203,7 +203,7 @@ coacha = Coach.create!(
   description: 'My father taught me big men fall just as quick as little ones if you put a sword through their hearts.',
   field: 'Walls',
   hourly_rate: '100',
-  city: 'Ibiza',
+  city: 'Porto',
   born_on: '01/01/1976',
   available_start_at: '08:00:00',
   available_end_at: '18',
@@ -217,7 +217,7 @@ coachb = Coach.create!(
   description: 'I have been in the tech industry for 20 years. I love inspiring people and helping them to achieve their goals.',
   field: 'IT',
   hourly_rate: '200',
-  city: 'Rio de Janeiro',
+  city: 'Porto',
   born_on: '01/01/1980',
   available_start_at: '09:00:00',
   available_end_at: '17',
@@ -231,7 +231,7 @@ coachc = Coach.create!(
   password: '123456',
   field: 'Accounting',
   hourly_rate: '100',
-  city: 'New York',
+  city: 'Porto',
   born_on: '01/01/1940',
   available_start_at: '08:00:00',
   available_end_at: '18',
@@ -245,7 +245,7 @@ coachd = Coach.create!(
   password: '123456',
   field: 'Lawyer',
   hourly_rate: '100',
-  city: 'Rio de Janeiro',
+  city: 'Porto',
   born_on: '01/01/1985',
   available_start_at: '05:00:00',
   available_end_at: '12:00:00',
@@ -291,15 +291,17 @@ puts "Grab a coffee or something."
 
 counter = 0
 
-url = 'https://randomuser.me/api/?results=500'
+number_of_coaches = 1000
+
+url = "https://randomuser.me/api/?results=#{number_of_coaches}"
 json = JSON.parse(open(url).read)
 
-500.times  do
-  first_name = Faker::Name.first_name
-  last_name = Faker::Name.last_name
+number_of_coaches.times  do
+  first_name = json["results"][counter]["name"]["first"]
+  last_name = json["results"][counter]["name"]["last"]
   email = "#{first_name}#{last_name}@#{emails.sample}.com"
 
-  Coach.create!(
+  Coach.create(
   first_name: first_name,
   last_name: last_name,
   email: email,

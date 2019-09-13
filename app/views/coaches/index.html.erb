@@ -9,7 +9,7 @@
   <div class="card-category" style="background-size: cover; background-position: center; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
       url(<%= city_image_url %>)">
     <div class="text-center">
-      <p>Discover coaches in <br> <%= params[:city].empty? ? "the World" : params[:city].capitalize %></p>
+      <p>Discover coaches in <br> <%= params[:city].empty? ? "the World" : params[:city].split.map(&:capitalize).join(' ') %></p>
     </div>
    </div>
   <div class="my-4">
@@ -17,7 +17,7 @@
 
   </div>
   <div class="mb-4">
-    <h2><%= @coaches.count %> coaches found in <%= params[:city].empty? ? "the World" : params[:city].capitalize %></h2>
+    <h2><%= @coaches.count %> coaches found in <%= params[:city].empty? ? "the World" : params[:city].split.map(&:capitalize).join(' ') %></h2>
   </div>
 
   <div class="coaches-cards" >
@@ -31,10 +31,10 @@
 
     <a class="coaches-card-link" href="<%= coach_path(coach) %>" target="_blank">
       <div class="coaches-card">
-            <%= image_tag("#{coach.image_url ? coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob'}", alt: "coach picture", class: 'card-trip-user avatar-square') %>
+            <%= image_tag("#{coach.image_url ? coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob'}", alt: "coach picture", class: '') %>
 
             <div class="coaches-card-infos">
-              <h2><%= "#{coach.first_name} #{coach.last_name}" %></h2>
+              <h2><%= "#{coach.first_name.capitalize} #{coach.last_name.capitalize}" %></h2>
               <br>
               <p ><i class="fas fa-lg fa-map-marked-alt"></i> City: <%= coach.city  %></p>
               <p ><i class="fas fa-lg fa-award"></i> Specialty: <%= coach.field %></p>
