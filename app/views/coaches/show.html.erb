@@ -1,37 +1,47 @@
 <hr class="mt-0">
 <div class="container">
 
-    <div class="d-flex justify-content-around align-items-center">
-        <img class="avatar-super-large" src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>"/>
-      <div class="m-3">
-        <h2><%= "#{@coach.first_name} #{@coach.last_name}" %></h2>
+    <div class="coach-card d-flex justify-content-around align-items-center">
 
-        <p>
-          <a href="mailto:<%= @coach.email %>?Subject=Hello%20<%= @coach.first_name %>!">
-           <i class="far fa-2x fa-envelope"></i>
-           <%= @coach.email %>
-           </a>
-          <a class='todo' href=""><i class="fab fa-2x fa-linkedin ml-2"></i></a>
-          <a class='todo' href=""><i class="fab fa-2x fa-twitter-square"></i></a>
-          <a class='todo' href=""><i class="fab fa-2x fa-instagram"></i></a>
-        <p>
+      <div class="image">
+        <img class="avatar-super-large" src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>"/>
+      </div>
+
+      <div class="coach-info">
+        <div>
+          <h2>
+            <%= "#{@coach.first_name} #{@coach.last_name}" %>
+            <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-linkedin ml-2"></i></a>
+            <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-twitter-square"></i></a>
+            <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-instagram"></i></a>
+          </h2>
+          <p>
+            <a style="color: #666" href="mailto:<%= @coach.email %>?Subject=Hello%20<%= @coach.first_name %>!">
+             <i class="far fa-1x fa-envelope"></i>
+             <%= @coach.email %>
+             </a>
+        </div>
 
         <div>
-          <p class="m-0"><i class="fas fa-lg fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
-          <p class="m-0"><i class="fas fa-lg fa-award"></i> Specialty: <%= @coach.field %></p>
-          <p class="m-0"><i class="fas fa-lg fa-dollar-sign"></i> <%= @coach.hourly_rate %> / hour</p>
-          <p class="m-0"><i class="far fa-lg fa-calendar-alt"></i> Availability: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> on business days</p>
+          <p><i class="fas fa-lg fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
+          <p><i class="fas fa-lg fa-award"></i> Specialty: <%= @coach.field %></p>
+          <p><i class="far fa-lg fa-calendar-alt"></i> Availability: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> on business days</p>
         </div>
       </div>
 
-      <%= link_to "Book an appointment with #{@coach.first_name}",
-        new_coach_appointment_path(@coach),
-        class: "btn btn-gradient"%>
+      <div class="book-me text-center">
+        <h2>
+          <strong><%= @coach.hourly_rate %>€</strong><span style="font-size: 16px">/h</span>
+        </h2>
+
+
+          <%= link_to "Book a class", new_coach_appointment_path(@coach), class: "btn btn-gradient"%>
+      </div>
+
 
     </div>
-    <p>
-    <p class="text-justify">"<%= @coach.description  %>"</p>
     <br>
+    <p class="text-justify container">"<%= @coach.description  %>"</p>
 </div>
 
 <script>
