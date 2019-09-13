@@ -252,17 +252,36 @@ coachd = Coach.create!(
   image_url: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/NafSadh_Profile.jpg/768px-NafSadh_Profile.jpg",)
 
 
-
-a = Appointment.new(schedule_at: '10/9/2020', payment_status: 'paid', duration: '2', user_id: '1', coach_id: '1')
+a = Appointment.new(
+  schedule_at: '10/10/2019 12:00:00',
+  payment_status: 'paid',
+  duration: '2',
+  user_id: '1',
+  coach_id: '1')
 a.user = natalia
 a.coach = coacha
-b = Appointment.new(schedule_at: '10/8/2020', payment_status: 'paid', duration: '1', user_id: '2', coach_id: '1')
+b = Appointment.new(
+  schedule_at: '10/8/2020 12:00:00',
+  payment_status: 'paid',
+  duration: '1',
+  user_id: '2',
+  coach_id: '1')
 b.user = andre
 b.coach = coachb
-c = Appointment.new(schedule_at: '10/7/2020', payment_status: 'paid', duration: '1', user_id: '4', coach_id: '1')
+c = Appointment.new(
+  schedule_at: '10/7/2020 12:00:00',
+  payment_status: 'paid',
+  duration: '1',
+  user_id: '4',
+  coach_id: '1')
 c.user = sarra
 c.coach = coachc
-d= Appointment.new(schedule_at: '10/10/2020', payment_status: 'paid', duration: '1', user_id: '3', coach_id: '1')
+d= Appointment.new(
+  schedule_at: '10/10/2020 12:00:00',
+  payment_status: 'paid',
+  duration: '1',
+  user_id: '3',
+  coach_id: '1')
 d.user = fer
 d.coach = coachd
 
