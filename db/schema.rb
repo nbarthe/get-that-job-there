@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2019_09_12_144217) do
     t.integer "coach_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.time "start_time"
+    t.time "end_time"
   end
 
   create_table "users", force: :cascade do |t|
