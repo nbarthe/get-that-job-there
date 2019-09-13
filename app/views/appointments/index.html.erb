@@ -11,26 +11,31 @@
 
 
 
-  <div class="">
+  <div class="appointments-cards">
         <% @appointments.each do |appointment| %>
         <% coach = Coach.find(appointment.coach_id) %>
 
-        <div class="appointment-card my-3 p-2">
+        <div class="appointment-card m-3 p-2 text-center">
 
-            <div class="text-center">
+            <div>
               <p>You have a meeting
-                at <%= appointment.start_time %> for <%= pluralize( appointment.duration, 'hour' ) %>
-                with <strong> <%= link_to coach.first_name, coach_path(coach) %></strong>
-                <img src="<%= coach.image_url%>" class="avatar-large" alt="">
+                at <%= appointment.start_time %> <br>
+                for <%= pluralize( appointment.duration, 'hour' ) %> <br>
+                with <strong> <%= link_to coach.first_name, coach_path(coach), style: "color: #666" %></strong>
               </p>
+              <a href="<%= coach_path(coach)  %>">
+                <img src="<%= coach.image_url%>" class="avatar-large" alt="">
+              </a>
             </div>
 
-            <h2>
+            <h3>
               <%= "#{coach.first_name} #{coach.last_name}" %>
-              <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-linkedin ml-2"></i></a>
-              <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-twitter-square"></i></a>
-              <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-instagram"></i></a>
-            </h2>
+            </h3>
+            <p>
+              <a class='todo' href=""><i style="color: #666" class="fab fa-lg fa-linkedin ml-2"></i></a>
+              <a class='todo' href=""><i style="color: #666" class="fab fa-lg fa-twitter-square"></i></a>
+              <a class='todo' href=""><i style="color: #666" class="fab fa-lg fa-instagram"></i></a>
+            </p>
             <p>
               <a style="color: #666" href="mailto:<%= coach.email %>?Subject=Hello%20<%= coach.first_name %>!">
                <i class="far fa-1x fa-envelope"></i>
