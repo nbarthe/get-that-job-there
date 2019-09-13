@@ -13,9 +13,13 @@
         <div class="appointment-card m-3 p-2 text-center">
 
             <div>
+              <!-- this shit is completely broken
+              I really need to see how this was done and
+              work on the appointment model / migrations
+              check schedule_at AND start_time -->
               <p class="m-3">You have a meeting
                 on <%= appointment.schedule_at.strftime("%d %b %y") %>
-                at <%= appointment.schedule_at.strftime("%H:%M") %>
+                at <%= appointment.start_time.strftime("%H:%M") %>
                 for <%= pluralize( appointment.duration, 'hour' ) %>
                 with <strong> <%= link_to coach.first_name, coach_path(coach), style: "color: #666" %></strong>
               </p>
