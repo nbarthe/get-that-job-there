@@ -291,7 +291,7 @@ puts "Grab a coffee or something."
 
 counter = 0
 
-url = 'https://randomuser.me/api/?results=100'
+url = 'https://randomuser.me/api/?results=500'
 json = JSON.parse(open(url).read)
 
 500.times  do
