@@ -39,7 +39,7 @@
               <p ><i class="fas fa-lg fa-map-marked-alt"></i> City: <%= coach.city  %></p>
               <p ><i class="fas fa-lg fa-award"></i> Specialty: <%= coach.field %></p>
               <p ><i class="fas fa-lg fa-dollar-sign"></i> <%= coach.hourly_rate %> / hour</p>
-              <p ><i class="far fa-lg fa-calendar-alt"></i> <%= coach.available_start_at.strftime("%H:%M AM") %> to <%= coach.available_end_at.strftime("%H:%M PM") %></p>
+              <p ><i class="far fa-lg fa-calendar-alt"></i> <%= coach.available_start_at.strftime("%H:%M") %> to <%= coach.available_end_at.strftime("%H:%M") %></p>
 
               <p class="text-justify"><strong>Description:</strong><br>
                 <% if coach.description.length > 99 %>

@@ -80,7 +80,7 @@ As a Career Coach, I am passionate to support and challenge people in their prof
 I’d love to connect personally with you and if you want to contact me you can find me here!
 ',
   field: 'IT',
-  hourly_rate: '60 EUR',
+  hourly_rate: '60',
   city: 'Porto',
   born_on: '01/01/1976',
   available_start_at: '08:00:00',
@@ -94,7 +94,7 @@ coach1 = Coach.create!(
   password: '123456',
   description: 'It is not about telling people what to do, it is making them think on how to do it. I am a passionate Life & Business Coach working in Human Resources because I truly believe that great vision without great people is irrelevant. ',
   field: 'IT',
-  hourly_rate: '150 EUR',
+  hourly_rate: '150',
   city: 'Porto',
   born_on: '01/06/1982',
   available_start_at: '08:00:00',
@@ -108,7 +108,7 @@ coach2 = Coach.create!(
   password: '123456',
   description: 'I am a professional coach. I can help you during all your job research process from writing your resume to preparing your job interview.',
   field: 'IT',
-  hourly_rate: '85 EUR',
+  hourly_rate: '85',
   city: 'Porto',
   born_on: '06/06/1982',
   available_start_at: '08:00:00',
@@ -124,7 +124,7 @@ coach3 = Coach.create!(
 
 5 steps for success: Self-Motivation | Engagement | Focus and Planning | Overcoming | People ',
   field: 'IT',
-  hourly_rate: '100 EUR',
+  hourly_rate: '100',
   city: 'Porto',
   born_on: '06/06/1982',
   available_start_at: '08:00:00',
@@ -140,7 +140,7 @@ coach4 = Coach.create!(
 
 Karen recently completed training as a Career Development Facilitator at the University of Wisconsin. This accreditation broadens her current skill set and allows her to administer career assessments and job search strategies for candidates seeking clarification in the industry that best matches their skills and strengths.  Karen resides in Wisconsin with her three children, husband, and their dog, Oreo.',
   field: 'IT',
-  hourly_rate: '90 EUR',
+  hourly_rate: '90',
   city: 'Porto',
   born_on: '06/06/1982',
   available_start_at: '08:00:00',
@@ -155,7 +155,7 @@ coach5 = Coach.create!(
   description: 'I am an IT recruiter with 10 years of experience. I offer my coaching services to help foreigners looking for a job in France especially in Paris.
   I can help you in all the process from the resume to the salary negociation and the job interview',
   field: 'Marketing',
-  hourly_rate: '95 EUR',
+  hourly_rate: '95',
   city: 'Paris',
   born_on: '06/06/1982',
   available_start_at: '01:00:00',
@@ -170,7 +170,7 @@ coach6 = Coach.create!(
   description: 'I am an arecruiter with 20 years of experience in the tech industry. I offer my coaching services to help foreigners looking for a job in France especially in Paris.
   I can help you in all the process from the resume to the salary negociation and the job interview',
   field: 'IT and sales',
-  hourly_rate: '50 EUR',
+  hourly_rate: '50',
   city: 'Porto',
   born_on: '06/06/1982',
   available_start_at: '08:00:00',
@@ -185,7 +185,7 @@ coach7 = Coach.create!(
   description: 'I am passionate about coaching and helping people reaching their goals. I offer my coaching services to help foreigners looking for a job in France especially in Paris.
   I can help you in all the process from the resume to the salary negociation and the job interview',
   field: 'human ressources',
-  hourly_rate: '200 EUR',
+  hourly_rate: '200',
   city: 'Porto',
   born_on: '06/06/1982',
   available_start_at: '08:00:00',
@@ -200,7 +200,7 @@ coacha = Coach.create!(
   password: '123456',
   description: 'My father taught me big men fall just as quick as little ones if you put a sword through their hearts.',
   field: 'Walls',
-  hourly_rate: '100 EUR',
+  hourly_rate: '100',
   city: 'Ibiza',
   born_on: '01/01/1976',
   available_start_at: '08:00:00',
@@ -214,7 +214,7 @@ coachb = Coach.create!(
   password: '123456',
   description: 'I have been in the tech industry for 20 years. I love inspiring people and helping them to achieve their goals.',
   field: 'IT',
-  hourly_rate: '200 EUR',
+  hourly_rate: '200',
   city: 'Rio de Janeiro',
   born_on: '01/01/1980',
   available_start_at: '09:00:00',
@@ -228,7 +228,7 @@ coachc = Coach.create!(
   email: 'martinz@coaching.com',
   password: '123456',
   field: 'Accounting',
-  hourly_rate: '100 EUR',
+  hourly_rate: '100',
   city: 'New York',
   born_on: '01/01/1940',
   available_start_at: '08:00:00',
@@ -242,7 +242,7 @@ coachd = Coach.create!(
   description: 'I have been working as a private Lawyer for the last 15 years. I also lived abroad so I know how it feels like being in a new city. I can help you understand the rules of the game in Rio.',
   password: '123456',
   field: 'Lawyer',
-  hourly_rate: '100 EUR',
+  hourly_rate: '100',
   city: 'Rio de Janeiro',
   born_on: '01/01/1985',
   available_start_at: '05:00:00',
@@ -287,7 +287,7 @@ emails = [
 puts "Creating random coaches. It's gonna take a while..."
 puts "Grab a coffee or something."
 
-5.times  do
+500.times  do
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
   email = "#{first_name}#{last_name}@#{emails.sample}.com"
