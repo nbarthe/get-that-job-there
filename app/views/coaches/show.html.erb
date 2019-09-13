@@ -4,29 +4,37 @@
     <div class="d-flex justify-content-around align-items-center">
         <img class="avatar-super-large" src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>"/>
       <div class="m-3">
-        <h2><%= "#{@coach.first_name} #{@coach.last_name}" %></h2>
+        <h2><%= "#{@coach.first_name} #{@coach.last_name}" %>
+          <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-linkedin ml-2"></i></a>
+          <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-twitter-square"></i></a>
+          <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-instagram"></i></a></h2>
 
         <p>
-          <a href="mailto:<%= @coach.email %>?Subject=Hello%20<%= @coach.first_name %>!">
-           <i class="far fa-2x fa-envelope"></i>
+          <a style="color: #666" href="mailto:<%= @coach.email %>?Subject=Hello%20<%= @coach.first_name %>!">
+           <i class="far fa-1x fa-envelope"></i>
            <%= @coach.email %>
            </a>
-          <a class='todo' href=""><i class="fab fa-2x fa-linkedin ml-2"></i></a>
-          <a class='todo' href=""><i class="fab fa-2x fa-twitter-square"></i></a>
-          <a class='todo' href=""><i class="fab fa-2x fa-instagram"></i></a>
+
         <p>
+
+        <p>
+
+        </p>
 
         <div>
           <p class="m-0"><i class="fas fa-lg fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
           <p class="m-0"><i class="fas fa-lg fa-award"></i> Specialty: <%= @coach.field %></p>
-          <p class="m-0"><i class="fas fa-lg fa-dollar-sign"></i> <%= @coach.hourly_rate %> / hour</p>
           <p class="m-0"><i class="far fa-lg fa-calendar-alt"></i> Availability: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> on business days</p>
         </div>
       </div>
 
-      <%= link_to "Book an appointment with #{@coach.first_name}",
+      <div>
+          <p class="text-center m-0"> <%= @coach.hourly_rate %> <i class="fas fa-lg fa-euro-sign"></i> / hour</p>
+          <%= link_to "Book a class",
         new_coach_appointment_path(@coach),
         class: "btn btn-gradient"%>
+      </div>
+
 
     </div>
     <p>
