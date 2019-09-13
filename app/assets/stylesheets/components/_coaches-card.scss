@@ -55,3 +55,11 @@
   text-decoration:none;
   cursor:pointer;
 }
+
+.coach-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+}
+

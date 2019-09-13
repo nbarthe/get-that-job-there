@@ -245,8 +245,8 @@ coachd = Coach.create!(
   hourly_rate: '100 EUR',
   city: 'Rio de Janeiro',
   born_on: '01/01/1985',
-  available_start_at: '05',
-  available_end_at: '12',
+  available_start_at: '05:00:00',
+  available_end_at: '12:00:00',
   image_url: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a1/NafSadh_Profile.jpg/768px-NafSadh_Profile.jpg",)
 
 
@@ -286,7 +286,8 @@ emails = [
 
 puts "Creating random coaches. It's gonna take a while..."
 puts "Grab a coffee or something."
-10.times  do
+
+5.times  do
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
   email = "#{first_name}#{last_name}@#{emails.sample}.com"

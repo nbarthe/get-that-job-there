@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+
   devise_for :users
-  resources :users do
+
+  # devise_for :users
+  # devise_scope :user do
+  #  get ‘/users/sign_out’ => ‘devise/sessions#destroy’
+  # end
+
+  resources :users, except: :show do
     resources :appointments, only: [ :index]
   end
+
   resources :coaches, only: [ :index, :show ] do
     resources :appointments, only: [ :index, :new, :create ]
   end
