@@ -2,44 +2,42 @@
 <div class="container">
 
     <div class="d-flex justify-content-around align-items-center">
+
+      <div class="image">
         <img class="avatar-super-large" src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>"/>
-      <div class="m-3">
-        <h2><%= "#{@coach.first_name} #{@coach.last_name}" %>
-          <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-linkedin ml-2"></i></a>
-          <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-twitter-square"></i></a>
-          <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-instagram"></i></a></h2>
+      </div>
 
-        <p>
-          <a style="color: #666" href="mailto:<%= @coach.email %>?Subject=Hello%20<%= @coach.first_name %>!">
-           <i class="far fa-1x fa-envelope"></i>
-           <%= @coach.email %>
-           </a>
-
-        <p>
-
-        <p>
-
-        </p>
+      <div class="coach-info">
+        <div>
+          <h2>
+            <%= "#{@coach.first_name} #{@coach.last_name}" %>
+            <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-linkedin ml-2"></i></a>
+            <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-twitter-square"></i></a>
+            <a class='todo' href=""><i style="color: #666" class="fab fa-xs fa-instagram"></i></a>
+          </h2>
+          <p>
+            <a style="color: #666" href="mailto:<%= @coach.email %>?Subject=Hello%20<%= @coach.first_name %>!">
+             <i class="far fa-1x fa-envelope"></i>
+             <%= @coach.email %>
+             </a>
+        </div>
 
         <div>
-          <p class="m-0"><i class="fas fa-lg fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
-          <p class="m-0"><i class="fas fa-lg fa-award"></i> Specialty: <%= @coach.field %></p>
-          <p class="m-0"><i class="far fa-lg fa-calendar-alt"></i> Availability: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> on business days</p>
+          <p><i class="fas fa-lg fa-map-marked-alt"></i> City: <%= @coach.city  %></p>
+          <p><i class="fas fa-lg fa-award"></i> Specialty: <%= @coach.field %></p>
+          <p><i class="far fa-lg fa-calendar-alt"></i> Availability: from <%=   @coach.available_start_at.strftime("%d AM") %> to <%= @coach.available_end_at.strftime("%d PM") %> on business days</p>
         </div>
       </div>
 
-      <div>
+      <div class="book-me">
           <p class="text-center m-0"> <%= @coach.hourly_rate %> <i class="fas fa-lg fa-euro-sign"></i> / hour</p>
-          <%= link_to "Book a class",
-        new_coach_appointment_path(@coach),
-        class: "btn btn-gradient"%>
+          <%= link_to "Book a class", new_coach_appointment_path(@coach), class: "btn btn-gradient"%>
       </div>
 
 
     </div>
-    <p>
-    <p class="text-justify">"<%= @coach.description  %>"</p>
     <br>
+    <p class="text-justify container">"<%= @coach.description  %>"</p>
 </div>
 
 <script>
