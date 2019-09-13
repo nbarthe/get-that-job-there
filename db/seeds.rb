@@ -67,13 +67,13 @@ coach0 = Coach.create!(
   email: 'patricia@coaching.com',
   password: '123456',
   description: 'Are you looking for someone to coah you for your job interview ?
-I am Paula, I am passionate about people and how can they improve and grow in the different areas of their lives.
+I am Patricia, I am passionate about people and how can they improve and grow in the different areas of their lives.
 
 I started as a Social Educator gaining a large experience in training in different types of teams from social research teams to social intervention teams. From this experience I became Mediator, Conflict Manager, Personal Developer, Cross-Cultural Manager and acquired many Intercultural Skills.
 
 My Professional Career evolved from the Social world to the aviation world. I learned to provide the best Customer Service, Promoting and Coordinating an outstanding co-operative teamwork, as a Cabin Crew Manager.
 
-After this fantastic experience she decided it was time to follow the dream and I became a Certified Coach.
+After this fantastic experience I decided it was time to follow the dream and I became a Certified Coach.
 
 As a Career Coach, I am passionate to support and challenge people in their professional area. I triggers in people endless possibilities and options that will turn into massive action towards the desired goal.
 
@@ -158,7 +158,7 @@ coach5 = Coach.create!(
   hourly_rate: '95 EUR',
   city: 'Paris',
   born_on: '06/06/1982',
-  available_start_at: '08',
+  available_start_at: '01',
   available_end_at: '18',
   image_url: "https://www.superprof.fr/images/annonces/professeur-home-professeurs-reussir-concours-ecoles-architecture-orientation-lettre-motivation-dossier-artistique.jpg",)
 
@@ -286,6 +286,7 @@ emails = [
 
 puts "Creating random coaches. It's gonna take a while..."
 puts "Grab a coffee or something."
+
 5.times  do
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
