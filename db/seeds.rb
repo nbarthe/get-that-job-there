@@ -1,3 +1,5 @@
+require 'open-uri'
+require 'json'
 require 'faker'
 
 puts "Let's seed it"
@@ -287,10 +289,16 @@ emails = [
 puts "Creating random coaches. It's gonna take a while..."
 puts "Grab a coffee or something."
 
+counter = 0
+
+url = 'https://randomuser.me/api/?results=100'
+json = JSON.parse(open(url).read)
+
 500.times  do
   first_name = Faker::Name.first_name
   last_name = Faker::Name.last_name
   email = "#{first_name}#{last_name}@#{emails.sample}.com"
+
   Coach.create!(
   first_name: first_name,
   last_name: last_name,
@@ -303,7 +311,9 @@ puts "Grab a coffee or something."
   hourly_rate: "#{rand(10..100)} EUR",
   available_start_at: rand(8..10).to_s,
   available_end_at: rand(17..19).to_s,
-  image_url: "https://loremflickr.com/g/300/300/people")
+  image_url: json["results"][counter]["picture"]["large"])
+
+  counter += 1
 end
 
 puts 'Finished!'
