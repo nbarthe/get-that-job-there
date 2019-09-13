@@ -1,7 +1,7 @@
 <hr class="mt-0">
 <div class="container">
 
-    <div class="d-flex justify-content-around align-items-center">
+    <div class="coach-card d-flex justify-content-around align-items-center">
 
       <div class="image">
         <img class="avatar-super-large" src="<%= @coach.image_url ? @coach.image_url : 'https://kitt.lewagon.com/placeholder/users/krokrob' %>"/>
@@ -29,8 +29,12 @@
         </div>
       </div>
 
-      <div class="book-me">
-          <p class="text-center m-0"> <%= @coach.hourly_rate %> <i class="fas fa-lg fa-euro-sign"></i> / hour</p>
+      <div class="book-me text-center">
+        <h2>
+          <strong><%= @coach.hourly_rate %>€</strong><span style="font-size: 16px">/h</span>
+        </h2>
+
+
           <%= link_to "Book a class", new_coach_appointment_path(@coach), class: "btn btn-gradient"%>
       </div>
 
