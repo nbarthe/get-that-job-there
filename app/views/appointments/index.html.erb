@@ -18,6 +18,7 @@
         <div class="appointment-card m-3 p-2 text-center">
 
             <div>
+
               <p>You have a meeting
                 at <%= appointment.start_time %> <br>
                 for <%= pluralize( appointment.duration, 'hour' ) %> <br>
@@ -26,6 +27,7 @@
               <a href="<%= coach_path(coach)  %>">
                 <img src="<%= coach.image_url%>" class="avatar-large" alt="">
               </a>
+
             </div>
 
             <h3>

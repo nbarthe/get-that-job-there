@@ -83,7 +83,7 @@ I’d love to connect personally with you and if you want to contact me you can 
   hourly_rate: '60 EUR',
   city: 'Porto',
   born_on: '01/01/1976',
-  available_start_at: '08',
+  available_start_at: '08:00:00',
   available_end_at: '18',
   image_url: "https://www.superprof.fr/images/annonces/professeur-home-jouez-piano-plaisir-jouer-passion-piano.jpg",)
 
@@ -97,7 +97,7 @@ coach1 = Coach.create!(
   hourly_rate: '150 EUR',
   city: 'Porto',
   born_on: '01/06/1982',
-  available_start_at: '08',
+  available_start_at: '08:00:00',
   available_end_at: '18',
   image_url: "https://www.superprof.fr/images/annonces/professeur-home-superviseur-propose-cours-maya-zbrush-photoshop-photographie-retouches-preparation-concours-projets-fin.jpg",)
 
@@ -111,7 +111,7 @@ coach2 = Coach.create!(
   hourly_rate: '85 EUR',
   city: 'Porto',
   born_on: '06/06/1982',
-  available_start_at: '08',
+  available_start_at: '08:00:00',
   available_end_at: '18',
   image_url: "https://www.superprof.fr/images/annonces/professeur-home-cours-conversations-anglais-espagnol-francais-etudiants-professionnels-paris-banlieue-ouest.jpg",)
 
@@ -127,7 +127,7 @@ coach3 = Coach.create!(
   hourly_rate: '100 EUR',
   city: 'Porto',
   born_on: '06/06/1982',
-  available_start_at: '08',
+  available_start_at: '08:00:00',
   available_end_at: '18',
   image_url: "https://www.superprof.fr/images/annonces/professeur-home-professeur-mathematiques-specialiste-preparation-hec-pedagogue-professionnel-experimente.jpg",)
 
@@ -143,7 +143,7 @@ Karen recently completed training as a Career Development Facilitator at the Uni
   hourly_rate: '90 EUR',
   city: 'Porto',
   born_on: '06/06/1982',
-  available_start_at: '08',
+  available_start_at: '08:00:00',
   available_end_at: '18',
   image_url: "https://www.superprof.fr/images/annonces/professeur-home-cours-particuliers-langue-culture-italienne-professeure-diplomee-experimentee.jpg",)
 
@@ -158,7 +158,7 @@ coach5 = Coach.create!(
   hourly_rate: '95 EUR',
   city: 'Paris',
   born_on: '06/06/1982',
-  available_start_at: '01',
+  available_start_at: '01:00:00',
   available_end_at: '18',
   image_url: "https://www.superprof.fr/images/annonces/professeur-home-professeurs-reussir-concours-ecoles-architecture-orientation-lettre-motivation-dossier-artistique.jpg",)
 
@@ -173,7 +173,7 @@ coach6 = Coach.create!(
   hourly_rate: '50 EUR',
   city: 'Porto',
   born_on: '06/06/1982',
-  available_start_at: '08',
+  available_start_at: '08:00:00',
   available_end_at: '18',
   image_url: "https://www.superprof.fr/images/annonces/professeur-home-natif-anglophone-polyglotte-parle-dix-langues-experience-professeur-apprendra-totalite.jpg",)
 
@@ -188,7 +188,7 @@ coach7 = Coach.create!(
   hourly_rate: '200 EUR',
   city: 'Porto',
   born_on: '06/06/1982',
-  available_start_at: '08',
+  available_start_at: '08:00:00',
   available_end_at: '18',
   image_url: "https://www.superprof.fr/images/annonces/professeur-home-formatrice-anglais-britannique-cpf-accepte-reduction-impots-toeic-toefl-conversation-entretiens-concours.jpg",)
 
@@ -203,7 +203,7 @@ coacha = Coach.create!(
   hourly_rate: '100 EUR',
   city: 'Ibiza',
   born_on: '01/01/1976',
-  available_start_at: '08',
+  available_start_at: '08:00:00',
   available_end_at: '18',
   image_url: "https://likewise-stage.azureedge.net/uploads/08c59258-c3ce-40b5-a0e0-fcac6a062f5d/Jon_Snow.jpg",)
 
@@ -217,7 +217,7 @@ coachb = Coach.create!(
   hourly_rate: '200 EUR',
   city: 'Rio de Janeiro',
   born_on: '01/01/1980',
-  available_start_at: '09',
+  available_start_at: '09:00:00',
   available_end_at: '17',
   image_url: "https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg",)
 
@@ -231,7 +231,7 @@ coachc = Coach.create!(
   hourly_rate: '100 EUR',
   city: 'New York',
   born_on: '01/01/1940',
-  available_start_at: '08',
+  available_start_at: '08:00:00',
   available_end_at: '18',
   image_url: "https://i0.wp.com/zblogged.com/wp-content/uploads/2019/02/FakeDP.jpeg?resize=567%2C580&ssl=1",)
 
